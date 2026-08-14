@@ -33,13 +33,13 @@ blockquote>p{text-align:left;margin:0;}
 blockquote>p>strong{color:var(--brand);font-family:Arial,sans-serif;font-size:.96em;}
 ul,ol{margin:8px 0 12px;} li{margin:3px 0;} li>p{text-align:justify;}
 
-.box{border:1px solid var(--line);background:var(--boxbg);border-radius:4px;
+.box{text-align:justify;hyphens:auto;-webkit-hyphens:auto;border:1px solid var(--line);background:var(--boxbg);border-radius:4px;
      padding:clamp(12px,2vw,18px);margin:6px 0 18px;}
 .box[dir="rtl"]{text-align:right;}
 .box p:last-child{margin-bottom:0;}
 
-table{border-collapse:collapse;width:100%;margin:10px 0 18px;font-size:.92em;}
-th,td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top;}
+table{border-collapse:collapse;width:100%;margin:10px 0 18px;font-size:.92em;table-layout:fixed;}
+th,td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top;overflow-wrap:break-word;}
 th{background:#eef2f7;font-family:Arial,sans-serif;color:var(--brand);}
 th.gh{width:5%;text-align:center;}
 td.on{background:var(--on);} td.off{background:#fff;}
@@ -131,13 +131,7 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 <p><strong>Ethical and Regulatory Requirements</strong></p>
 <p>Does the research involve any of the following?</p>
 <p><em>Please select one option in each row.</em></p>
-<table>
-<colgroup>
-<col style="width: 31%" />
-<col style="width: 34%" />
-<col style="width: 34%" />
-</colgroup>
-<thead>
+<table><colgroup><col style="width:50%"><col style="width:25%"><col style="width:25%"></colgroup><thead>
 <tr class="header">
 <th></th>
 <th><strong>Yes</strong></th>
@@ -230,14 +224,7 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 <p><strong>The POC question</strong> is whether the fixed hybrid extraction and normalization approach from [1], extended using established supervised methods, can produce source-supported follow-up records from real de-identified clinical notes at a level of precision and review burden suitable for a pre-pilot system, and whether accepted records can be carried without loss of required information into a standards-based clinical workflow.</p>
 <p><strong>Innovation and what the POC extends.</strong> The proposed innovation is a system that converts free-text clinical intent into a structured, source-linked Actionable Clinical Record, using hybrid AI extraction, explicit normalization of actions and timing, and standard interfaces for integration into clinical workflows. An explicit symbolic layer holds the parts that must be exact: the normalized action, the computed date, and the source span, so every ACR is auditable rather than a fluent guess. Existing clinical NLP systems [7–9] extract concepts and relations, and commercial radiology systems can identify and structure specific follow-up recommendations [21]. CareLoop’s proposed differentiation is the broader operational representation of prospective clinical intent: source-supported action and timing together with explicit target, actor, condition and dependency fields, calibrated human review, and deterministic mapping into interoperable workflow resources. The innovation therefore lies not in task tracking itself, but in creating a reusable, auditable Clinical Intent Management layer between heterogeneous clinical text and downstream care workflows. On the controlled 2,000-note benchmark in [1], the completed method achieved action–time Pair F1 of 0.997 on seen and 0.986 on unseen action types, substantially outperforming the evaluated general-purpose LLM baselines. These results establish the technical starting point; the present POC tests whether the approach transfers to heterogeneous real clinical text. It extends the same established approach to an enriched ACR comprising target, actor, condition, and dependency fields, to heterogeneous real clinical text, and to calibrated review and standards-based integration.</p>
 <p><strong>Positioning versus existing approaches.</strong></p>
-<table>
-<colgroup>
-<col style="width: 22%" />
-<col style="width: 23%" />
-<col style="width: 27%" />
-<col style="width: 26%" />
-</colgroup>
-<thead>
+<table><colgroup><col style="width:20%"><col style="width:22%"><col style="width:28%"><col style="width:30%"></colgroup><thead>
 <tr class="header">
 <th><strong>Existing approach</strong></th>
 <th><strong>Strength</strong></th>
@@ -280,13 +267,7 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 </table>
 <h4 id="project-goals-and-tasks">Project Goals and Tasks</h4>
 <p>The plan is organized as six tasks in a dependency chain: the gold dataset (Task 1) enables engineering adaptation (Task 2) and validation (Task 3), which enable EHR integration (Task 4) and hosted deployment (Task 5); market validation and commercialization (Task 6) run alongside. Validation targets are fixed before any model adaptation. Tasks 1–5 are carried out using publicly available and/or credentialed de-identified research datasets, providing a complete technical validation path. Task 6 complements this work through partner-based market discovery and product feedback, helping assess workflow fit, pilot readiness, and commercialization potential, without involving patient data.</p>
-<table>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 22%" />
-<col style="width: 57%" />
-</colgroup>
-<thead>
+<table><colgroup><col style="width:20%"><col style="width:24%"><col style="width:56%"></colgroup><thead>
 <tr class="header">
 <th><strong>Task (months)</strong></th>
 <th><strong>Objective</strong></th>
@@ -331,12 +312,7 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 <p><strong>Task 1. Gold-standard data.</strong> No public corpus carries the full follow-up ACR labels, so the measurement instrument is a human-labeled gold standard built over de-identified CLIP [13], MIMIC-IV-Note [14], and i2b2/n2c2 2012 [15] (reusing the CLIP action taxonomy and i2b2/THYME TIMEX3 guidelines to lower cost). The PoC validates on credentialed English-language US clinical corpora, providing an appropriate basis for initial English-language deployment and commercialization. EHR interoperability is independently validated through international standards; Hebrew or mixed-language adaptation would be a later site-specific localization rather than a PoC outcome. A pilot prevalence estimate will determine the final sampling allocation across corpora. If eligible instructions are sparser than expected, development data will be enriched from corpus components with higher follow-up prevalence while retaining a separately sampled natural-prevalence test set for unbiased detection evaluation. Trained clinical-background annotators mark all eligible instructions on sampled <em>source notes</em> (negatives and non-actionable mentions retained, so detection recall and false-positive rate are measurable) and annotate the semantic fields; the guideline is frozen after a pilot. A stratified subset will be independently double-annotated to estimate inter-annotator agreement, computed before adjudication with element-appropriate metrics (κ/α, span F1, date agreement), and the clinical advisor will resolve disagreements and ambiguous cases.</p>
 <p><strong>Corpus and annotation scale.</strong> The target corpus contains approximately 1,500–2,000 sampled notes and at least 1,000 eligible follow-up instructions, plus negative and non-actionable examples. Target agreement is span F1 ≥ 0.85 for span fields, κ/α ≥ 0.75 for categorical fields, and ≥ 0.90 agreement on normalized dates; failure to reach these thresholds triggers guideline revision and a second pilot.</p>
 <p><strong>Task 2. Engineering adaptation and extended-ACR implementation.</strong> The action–date engine is extended to the remaining ACR fields and adapted to real text using established extraction and normalization techniques; the scientific architecture, learning objective, and temporal-normalization method are fixed, and the PoC addresses implementation, adaptation, and validation rather than development of a new basic method:</p>
-<table>
-<colgroup>
-<col style="width: 45%" />
-<col style="width: 54%" />
-</colgroup>
-<thead>
+<table><colgroup><col style="width:32%"><col style="width:68%"></colgroup><thead>
 <tr class="header">
 <th><strong>ACR element to add</strong></th>
 <th><strong>Existing technique applied</strong></th>
@@ -381,24 +357,12 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 <ol start="2" type="1">
 <li><p><strong>Schedules and Work Plan (Gantt)</strong></p></li>
 </ol>
-<table>
-<colgroup>
-<col style="width: 5%" />
-<col style="width: 61%" />
-<col style="width: 3%" />
-<col style="width: 2%" />
-<col style="width: 0%" />
-<col style="width: 5%" />
-<col style="width: 6%" />
-<col style="width: 7%" />
-<col style="width: 7%" />
-</colgroup>
-<thead>
+<table><colgroup><col style="width:5%"><col style="width:33%"><col style="width:12.4%"><col style="width:12.4%"><col style="width:12.4%"><col style="width:12.4%"><col style="width:12.4%"></colgroup><thead>
 <tr class="header">
 <th class="gh">#</th>
 <th><strong>Task</strong></th>
-<th colspan="2"><strong>1-3</strong></th>
-<th colspan="2"><strong>4-8</strong></th>
+<th><strong>1-3</strong></th>
+<th><strong>4-8</strong></th>
 <th><strong>9-14</strong></th>
 <th><strong>15-19</strong></th>
 <th><strong>20-24</strong></th>
@@ -408,8 +372,8 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 <tr class="odd">
 <td>1</td>
 <td>Data preparation &amp; labeling</td>
-<td colspan="2" class="on"></td>
-<td colspan="2" class="on"></td>
+<td class="on"></td>
+<td class="on"></td>
 <td class="off"></td>
 <td class="off"></td>
 <td class="off"></td>
@@ -417,8 +381,8 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 <tr class="even">
 <td>2</td>
 <td>Engineering adaptation (extended ACR)</td>
-<td colspan="2" class="off"></td>
-<td colspan="2" class="on"></td>
+<td class="off"></td>
+<td class="on"></td>
 <td class="on"></td>
 <td class="off"></td>
 <td class="off"></td>
@@ -426,16 +390,16 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 <tr class="odd">
 <td>3</td>
 <td>Model validation</td>
-<td colspan="2" class="off"></td>
-<td colspan="2" class="off"></td>
+<td class="off"></td>
+<td class="off"></td>
 <td class="on"></td>
 <td class="on"></td>
 <td class="off"></td>
 </tr>
 <tr class="even">
 <td>4</td>
-<td colspan="2">EHR integration (FHIR / SMART on FHIR)</td>
-<td colspan="2" class="off"></td>
+<td>EHR integration (FHIR / SMART on FHIR)</td>
+<td class="off"></td>
 <td class="off"></td>
 <td class="on"></td>
 <td class="on"></td>
@@ -444,8 +408,8 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 <tr class="odd">
 <td>5</td>
 <td>Hosted prototype deployment</td>
-<td colspan="2" class="off"></td>
-<td colspan="2" class="off"></td>
+<td class="off"></td>
+<td class="off"></td>
 <td class="off"></td>
 <td class="on"></td>
 <td class="on"></td>
@@ -453,8 +417,8 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 <tr class="even">
 <td>6</td>
 <td>Market validation &amp; commercialization</td>
-<td colspan="2" class="on"></td>
-<td colspan="2" class="on"></td>
+<td class="on"></td>
+<td class="on"></td>
 <td class="on"></td>
 <td class="on"></td>
 <td class="on"></td>
@@ -496,14 +460,7 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 <p><strong>Position Title:</strong></p>
 <p>Senior Lecturer, School of Computer Science, Holon Institute of Technology</p>
 <p><strong>Education/Training</strong>:</p>
-<table>
-<colgroup>
-<col style="width: 35%" />
-<col style="width: 11%" />
-<col style="width: 11%" />
-<col style="width: 42%" />
-</colgroup>
-<thead>
+<table><colgroup><col style="width:40%"><col style="width:12%"><col style="width:12%"><col style="width:36%"></colgroup><thead>
 <tr class="header">
 <th><strong>Institution and Location</strong></th>
 <th><strong>Degree</strong></th>
@@ -589,13 +546,7 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 <p><strong>Total funding requested:</strong> 350000 NIS</p>
 <p><strong>Duration (months):</strong> 24</p>
 <p><strong>Currency:</strong> ILS(NIS)</p>
-<table>
-<colgroup>
-<col style="width: 29%" />
-<col style="width: 10%" />
-<col style="width: 60%" />
-</colgroup>
-<thead>
+<table><colgroup><col style="width:24%"><col style="width:10%"><col style="width:66%"></colgroup><thead>
 <tr class="header">
 <th><strong>Category</strong></th>
 <th><strong>Sum</strong></th>
