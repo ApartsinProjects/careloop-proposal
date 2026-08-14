@@ -44,6 +44,14 @@ th{background:#eef2f7;font-family:Arial,sans-serif;color:var(--brand);}
 th.gh{width:5%;text-align:center;}
 td.on{background:var(--on);} td.off{background:#fff;}
 
+
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin:8px 0 18px;}
+.member{border:1px solid var(--line);background:var(--boxbg);border-radius:4px;padding:14px 16px;}
+.member p{margin:0 0 6px;text-align:left;hyphens:none;}
+.member p:last-child{margin-bottom:0;}
+.mrole{font-family:Arial,Helvetica,sans-serif;font-weight:700;color:var(--brand);
+   border-bottom:1px solid var(--line);padding-bottom:6px;margin-bottom:9px;}
+@media print{.team{grid-template-columns:1fr 1fr;gap:10px;}.member{padding:10px 12px;}}
 .doctitle{font-family:Arial,sans-serif;font-size:11px;color:var(--brand);
      border-bottom:2px solid var(--brand);padding-bottom:6px;margin-bottom:16px;font-weight:700;
      overflow-wrap:anywhere;word-break:break-word;}
@@ -183,29 +191,36 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 <ol type="1">
 <li><p><strong>Principal Investigator</strong></p></li>
 </ol>
-<p><strong>Role in the Project</strong>: Principal Investigator (PI)</p>
-<blockquote>
-<p><strong>Name</strong>: Alexander Apartsin</p>
-<p>Institute: Holon Institute of Technology</p>
-<p><strong>Email</strong>: alexanderap@hit.ac.il</p>
-<p><strong>Mobile Phone Number</strong>:+972-54-4663885</p>
-<p><strong>Expertise</strong>: Artificial Intelligence, LLMs, New Product Development</p>
-</blockquote>
+<div class="team">
+<div class="member">
+<p class="mrole">Principal Investigator (PI)</p>
+<p><strong>Name:</strong> Alexander Apartsin</p>
+<p><strong>Institute:</strong> Holon Institute of Technology</p>
+<p><strong>Email:</strong> alexanderap@hit.ac.il</p>
+<p><strong>Mobile Phone Number:</strong> +972-54-4663885</p>
+<p><strong>Expertise:</strong> Artificial Intelligence, LLMs, New Product Development</p>
+</div>
+</div>
 <ol start="2" type="1">
 <li><p><strong>Research Team.</strong></p></li>
 </ol>
-<p><strong>Role in the Project</strong>: Research Assistant/Student</p>
-<blockquote>
-<p><strong>Name</strong>: TBD</p>
-<p><strong>Institute</strong>: TBD</p>
-<p><strong>Email</strong>: TBD</p>
-<p><strong>Mobile Phone Number</strong>: TBD</p>
+<div class="team">
+<div class="member">
+<p class="mrole">Research Assistant / Student</p>
+<p><strong>Name:</strong> TBD</p>
+<p><strong>Institute:</strong> TBD</p>
+<p><strong>Email:</strong> TBD</p>
+<p><strong>Mobile Phone Number:</strong> TBD</p>
 <p><strong>Expertise:</strong> Software and model development</p>
-<p><strong>Role in the Project:</strong> Clinical Advisor / Clinical Informatics Consultant<br />
-<strong>Name:</strong> TBD<br />
-<strong>Expertise:</strong> Clinical workflow, follow-up care, clinical annotation, and health-information-system integration<br />
-<strong>Role:</strong> Define clinical eligibility criteria and annotation guidelines; adjudicate ambiguous cases; assess clinical validity and review burden; advise on workflow integration and pilot success criteria</p>
-</blockquote>
+</div>
+<div class="member">
+<p class="mrole">Clinical Advisor / Clinical Informatics Consultant</p>
+<p><strong>Name:</strong> TBD</p>
+<p><strong>Institute:</strong> TBD</p>
+<p><strong>Expertise:</strong> Clinical workflow, follow-up care, clinical annotation, and health-information-system integration</p>
+<p><strong>Role:</strong> Define clinical eligibility criteria and annotation guidelines; adjudicate ambiguous cases; assess clinical validity and review burden; advise on workflow integration and pilot success criteria</p>
+</div>
+</div>
 <p><strong><br />
 </strong></p>
 <ol start="3" type="A">
