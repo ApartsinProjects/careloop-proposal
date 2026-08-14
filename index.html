@@ -66,7 +66,7 @@ ul,ol{margin:6px 0 10px;} li{margin:2px 0;} u{text-decoration:underline;}
 </blockquote>
 <div class="box" dir="rtl" lang="he">
 <p><span dir="rtl">מערכות רשומה רפואית אלקטרונית (EHR) מתעדות רשומות ועובדות קליניות מובנות, אך שכבה תפעולית חשובה נותרת לעיתים קרובות בטקסט החופשי בלבד: הכוונה הקלינית, כלומר, מה אמור להתבצע בהמשך עבור המטופל. הנחיות כגון "לחזור על בדיקת MRI בעוד שבועיים אם התסמינים נמשכים" עלולות לפיכך שלא להיקלט במערכות המשמשות לזימון תורים, מעקב ובקרה.</span></p>
-<p><span dir="rtl">CareLoop ממירה הנחיות כאלה לפעולות מובנות, מקושרות למקור וניתנות לבקרה. המערכת מבוססת על שיטה נוירו-סימבולית שפותחה במחקרו הקודם של החוקר הראשי לחילוץ ונרמול פעולות מעקב ותזמון. אי-הוודאות המרכזית שנותרה היא האם השיטה עוברת באופן אמין ממאגר מבוקר לטקסט קליני אמיתי והטרוגני ויכולה להשתלב בתהליך עבודה מעשי של EHR.</span></p>
+<p><span dir="rtl">CareLoop ממירה הנחיות כאלה לפעולות מובנות, מקושרות למקור וניתנות לבקרה. יכולת זו מכונה <strong>ניהול כוונה קלינית</strong> (Clinical Intent Management, CIM): שכבה רב-פעמית וניתנת לביקורת בין הטקסט הקליני ההטרוגני לבין תהליכי העבודה הפועלים על בסיסו. המערכת מבוססת על שיטה נוירו-סימבולית שפותחה במחקרו הקודם של החוקר הראשי לחילוץ ונרמול פעולות מעקב ותזמון. אי-הוודאות המרכזית שנותרה היא האם השיטה עוברת באופן אמין ממאגר מבוקר לטקסט קליני אמיתי והטרוגני ויכולה להשתלב בתהליך עבודה מעשי של EHR.</span></p>
 <p><span dir="rtl">ה-PoC ירחיב את הייצוג לשדות נוספים של כוונה קלינית, יבצע ולידציה על טקסט קליני אמיתי ומותמם באמצעות מבחן נעול ובקרה מכוילת, וידגים אינטגרציה מבוססת FHIR/SMART. התוצר יהיה אב-טיפוס מאומת לקראת פיילוט לניהול אמין של הנחיות מעקב.</span></p>
 </div>
 <blockquote>
@@ -74,7 +74,7 @@ ul,ol{margin:6px 0 10px;} li{margin:2px 0;} u{text-decoration:underline;}
 </blockquote>
 <div class="box">
 <p>Electronic Health Record (EHR) systems capture records and structured clinical facts, but a third operational layer often remains buried in free text: clinical intent, or what is supposed to happen next for the patient. Follow-up instructions such as “repeat the MRI in two weeks if symptoms persist” may therefore never enter the systems used to schedule, track, and audit care.</p>
-<p>CareLoop converts such instructions into structured, source-linked, and reviewable actions. It builds on the PI’s prior neuro-symbolic method for extracting and normalizing follow-up actions and timing. The key remaining uncertainty is whether this approach transfers reliably from a controlled benchmark to heterogeneous real clinical text and can support a practical EHR workflow.</p>
+<p>CareLoop converts such instructions into structured, source-linked, and reviewable actions. We term this capability <strong>Clinical Intent Management (CIM)</strong>: a reusable, auditable layer between heterogeneous clinical text and the workflows that act on it. CareLoop builds on the PI’s prior neuro-symbolic method for extracting and normalizing follow-up actions and timing. The key remaining uncertainty is whether this approach transfers reliably from a controlled benchmark to heterogeneous real clinical text and can support a practical EHR workflow.</p>
 <p>The PoC will extend the method to additional intent fields, validate it on real de-identified clinical notes using a locked test and calibrated review, and demonstrate standards-based integration through FHIR/SMART workflows. The outcome will be a validated pre-pilot prototype suitable for design-partner evaluation and preparation of a real-world pilot.</p>
 </div>
 <blockquote>
