@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CareLoop HIT VATAT POC Submission (mirror of DOCX)</title>
+<style>
+:root{--ink:#111;--line:#9aa4b2;--brand:#12355b;--boxbg:#fbfcfe;--on:#12355b;}
+*{box-sizing:border-box;}
+body{font-family:'Times New Roman',Georgia,serif;font-size:11.5pt;line-height:1.5;color:var(--ink);background:#e9edf1;margin:0;padding:24px 0;}
+.page{max-width:830px;margin:0 auto;background:#fff;padding:40px 48px;box-shadow:0 1px 6px rgba(0,0,0,.15);}
+p{margin:0 0 8px;} strong{font-weight:700;}
+h1,h2,h3,h4{font-family:Arial,Helvetica,sans-serif;color:var(--brand);}
+ol[type="A"],ol[type="1"]{margin:18px 0 6px;padding-left:22px;}
+ol[type="A"]>li>p,ol[type="1"]>li>p{margin:0;}
+ol[type="A"]>li>p>strong{font-family:Arial,sans-serif;font-size:13pt;color:var(--brand);text-transform:uppercase;letter-spacing:.3px;}
+ol[type="1"]>li>p>strong{font-family:Arial,sans-serif;font-size:11.5pt;color:var(--brand);}
+ol[type="A"]{border-top:2px solid var(--brand);padding-top:8px;}
+h4{font-size:11.5pt;margin:12px 0 4px;}
+blockquote{margin:6px 0;padding:0 0 0 4px;border:0;}
+blockquote>p>strong{color:var(--brand);}
+.box{border:1px solid var(--line);background:var(--boxbg);border-radius:3px;padding:12px 16px;margin:4px 0 14px;}
+.box[dir="rtl"]{text-align:right;}
+.box p{margin:0 0 8px;} .box p:last-child{margin-bottom:0;}
+table{border-collapse:collapse;width:100%;margin:8px 0 14px;font-size:10.5pt;}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top;}
+th{background:#eef2f7;font-family:Arial,sans-serif;color:var(--brand);}
+th.gh{width:5%;text-align:center;}
+td.on{background:var(--on);} td.off{background:#fff;}
+a{color:var(--brand);word-break:break-word;}
+ul,ol{margin:6px 0 10px;} li{margin:2px 0;} u{text-decoration:underline;}
+.doctitle{font-family:Arial,sans-serif;font-size:11px;color:var(--brand);border-bottom:2px solid var(--brand);padding-bottom:6px;margin-bottom:14px;font-weight:700;}
+@media print{body{background:#fff;padding:0;}.page{box-shadow:none;max-width:none;padding:0;}.doctitle{display:none;}}
+</style>
+<style id="gate-css">body>*{display:none!important}body{background:#e9edf1}</style>
+<script>
+(function(){
+  function unlock(){var c=document.getElementById('gate-css');if(c)c.remove();}
+  function deny(){document.documentElement.innerHTML='<body style="font-family:Arial,sans-serif;padding:48px;color:#12355b">Access denied.</body>';}
+  var ok=false;
+  for(var i=0;i<3&&!ok;i++){var p=prompt('Password required to view this document:');if(p===null)break;ok=(p==='12345');}
+  if(ok){if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',unlock);}else{unlock();}}
+  else{deny();}
+})();
+</script>
+</head>
+<body>
+<div class="page">
+<div class="doctitle">Mirror generated from HIT_Artificial_Intelligence_(Applications)_Alexander_Apartsin.docx</div>
+<p><strong><span dir="rtl">טופס הגשת הצעת מחקר</span></strong></p>
+<p><strong><span dir="rtl">תוכנית למימון מחקרי הוכחת היתכנות במוסדות המתוקצבים ע"י ות"ת- מחזור שני</span></strong></p>
+<p><span dir="rtl"><strong>מרכז הפרויקט:</strong> ד"ר אלכסנדר אפארצין</span></p>
+<p><span dir="rtl"><strong>מוסד מגיש:</strong> מכון טכנולוגי חולון (</span>HIT<span dir="rtl">)</span></p>
+<p><strong><span dir="rtl">נושא המחקר:</span></strong> CareLoop<span dir="rtl">: פלטפורמת בינה מלאכותית לניהול הנחיות טיפול ומעקב רפואי אמין</span></p>
+<p><span dir="rtl"><strong>תחום:</strong> Artificial_Intelligence_(Applications)</span></p>
+<p><strong>Research Title:</strong> CareLoop: An AI Platform for Clinical Intent Management and Reliable Follow-Up Care</p>
+<p><strong>Principal Investigator:</strong> Dr. Alexander Apartsin</p>
+<p><strong>Institute:</strong> Holon Institute of Technology (HIT)</p>
+<p><strong>Total Funding Requested (ILS):</strong> 350000</p>
+<p><strong>Duration (months):</strong> 24</p>
+<ol type="A">
+<li><p><strong>ABSTRACTS</strong></p></li>
+</ol>
+<blockquote>
+<p><strong>Hebrew Abstract (up to <span dir="rtl">1</span>,500 characters)</strong></p>
+</blockquote>
+<div class="box" dir="rtl" lang="he">
+<p><span dir="rtl">מערכות רשומה רפואית אלקטרונית (EHR) מתעדות רשומות ועובדות קליניות מובנות, אך שכבה תפעולית חשובה נותרת לעיתים קרובות בטקסט החופשי: הכוונה הקלינית, כלומר מה אמור לקרות בהמשך עבור המטופל. הנחיות כגון "לחזור על בדיקת MRI בעוד שבועיים אם התסמינים נמשכים" עלולות לכן שלא להיכנס למערכות המשמשות לתזמון, מעקב ובקרה.</span></p>
+<p><span dir="rtl">CareLoop ממירה הנחיות כאלה לפעולות מובנות, מקושרות למקור וניתנות לבקרה. המערכת מבוססת על שיטה נוירו-סימבולית שפותחה במחקרו הקודם של החוקר הראשי לחילוץ ונרמול פעולות מעקב ותזמון. אי-הוודאות המרכזית שנותרה היא האם השיטה עוברת באופן אמין ממאגר מבוקר לטקסט קליני אמיתי והטרוגני ויכולה להשתלב בתהליך עבודה מעשי של EHR.</span></p>
+<p><span dir="rtl">ה-PoC ירחיב את הייצוג לשדות נוספים של כוונה קלינית, יבצע ולידציה על טקסט קליני אמיתי ומותמם באמצעות מבחן נעול ובקרה מכוילת, וידגים אינטגרציה מבוססת FHIR/SMART. התוצר יהיה אב-טיפוס מאומת לקראת פיילוט לניהול אמין של הנחיות מעקב.</span></p>
+</div>
+<blockquote>
+<p><strong>English Abstract (up to 1,500 characters)</strong></p>
+</blockquote>
+<div class="box">
+<p>Electronic Health Record (EHR) systems capture records and structured clinical facts, but a third operational layer often remains buried in free text: clinical intent, or what is supposed to happen next for the patient. Follow-up instructions such as “repeat the MRI in two weeks if symptoms persist” may therefore never enter the systems used to schedule, track, and audit care.</p>
+<p>CareLoop converts such instructions into structured, source-linked, and reviewable actions. It builds on the PI’s prior neuro-symbolic method for extracting and normalizing follow-up actions and timing. The key remaining uncertainty is whether this approach transfers reliably from a controlled benchmark to heterogeneous real clinical text and can support a practical EHR workflow.</p>
+<p>The PoC will extend the method to additional intent fields, validate it on real de-identified clinical notes using a locked test and calibrated review, and demonstrate standards-based integration through FHIR/SMART workflows. The outcome will be a validated pre-pilot prototype suitable for design-partner evaluation and preparation of a real-world pilot.</p>
+</div>
+<blockquote>
+<p><strong>Relevance of the Proposed Research with the Selected Topic</strong> (up to 500 characters)</p>
+</blockquote>
+<div class="box">
+Primary field: Artificial Intelligence (Application). CareLoop uses AI to turn free-text follow-up instructions into structured, trackable actions. The underlying method has already been developed and evaluated in the PI’s previous research. This project validates and productizes it on real clinical text. Secondary relevance: Medicine (patient safety, continuity of care).
+</div>
+<blockquote>
+<p><strong>Applicability Abstract</strong> (up to 1,000 characters)</p>
+</blockquote>
+<div class="box">
+Current EHR systems often leave patient-specific follow-up intent in free text, outside the structured workflows used to schedule, track, and audit care. CareLoop addresses this gap by converting follow-up instructions into source-linked, reviewable actions that integrate with existing EHR workflows through standards such as FHIR, SMART on FHIR, and CDS Hooks. Initial buyers are expected to be health-system and health-plan/HMO quality, safety, and care-coordination functions; operational users are teams responsible for closing follow-up loops. The PoC will validate real-text accuracy, review burden, interoperability, and site-level economics, while customer discovery will define pilot requirements and seek pilot commitment or LOI. Commercialization will proceed first through design-partner pilots and direct deployment, followed by licensing/OEM with EHR or workflow vendors, or an HIT spin-out if traction supports it.
+</div>
+<p><strong><br />
+</strong></p>
+<blockquote>
+<p><strong>Intellectual Property and Commercial Interests</strong></p>
+<p>Are there any approved or submitted Patents? <span dir="rtl"></span>☐ Yes ☒ No</p>
+<p>If yes, please provide details: Click or tap here to enter text.</p>
+<p>Are there any industrial or commercial interests? <span dir="rtl"></span>☐ Yes ☒ No</p>
+<p>If yes, please provide details: Click or tap here to enter text.</p>
+</blockquote>
+<p><strong>Ethical and Regulatory Requirements</strong></p>
+<p>Does the research involve any of the following?</p>
+<p><em>Please select one option in each row.</em></p>
+<table>
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 34%" />
+<col style="width: 34%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Yes</strong></th>
+<th><strong>No</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Human participants</td>
+<td>☐</td>
+<td>☒</td>
+</tr>
+<tr class="even">
+<td>Animals</td>
+<td>☐</td>
+<td>☒</td>
+</tr>
+<tr class="odd">
+<td>Protected natural assets</td>
+<td>☐</td>
+<td>☒</td>
+</tr>
+<tr class="even">
+<td>Plants</td>
+<td>☐</td>
+<td>☒</td>
+</tr>
+<tr class="odd">
+<td>Schools</td>
+<td>☐</td>
+<td>☒</td>
+</tr>
+</tbody>
+</table>
+<p>☒ <span dir="rtl"></span>I acknowledge that I am responsible for ensuring that all required approvals are valid and, when necessary, renewed <span dir="rtl"></span>throughout the research period.</p>
+<p>Will the proposed research use infrastructure operated by international organizations of which Israel is a member? ☐ Yes ☒ No</p>
+<blockquote>
+<p>If yes, please specify the infrastructure: <span dir="rtl"></span> Click or tap here to enter text.</p>
+</blockquote>
+<p>Will the proposed research use institutional or national infrastructure? ☐ Yes ☒ No</p>
+<blockquote>
+<p>If yes, please specify the infrastructure: <span dir="rtl"></span> Click or tap here to enter text.</p>
+</blockquote>
+<p><strong><br />
+</strong></p>
+<ol start="2" type="A">
+<li><p><strong>THE RESEARCH GROUPS</strong></p></li>
+</ol>
+<ol type="1">
+<li><p><strong>Principal Investigator</strong></p></li>
+</ol>
+<p><strong>Role in the Project</strong>: Principal Investigator (PI)</p>
+<blockquote>
+<p><strong>Name</strong>: Alexander Apartsin</p>
+<p>Institute: Holon Institute of Technology</p>
+<p><strong>Email</strong>: alexanderap@hit.ac.il</p>
+<p><strong>Mobile Phone Number</strong>:+972-54-4663885</p>
+<p><strong>Expertise</strong>: Artificial Intelligence, LLMs, New Product Development</p>
+</blockquote>
+<ol start="2" type="1">
+<li><p><strong>Research Team.</strong></p></li>
+</ol>
+<p><strong>Role in the Project</strong>: Research Assistant/Student</p>
+<blockquote>
+<p><strong>Name</strong>: TBD</p>
+<p><strong>Institute</strong>: TBD</p>
+<p><strong>Email</strong>: TBD</p>
+<p><strong>Mobile Phone Number</strong>: TBD</p>
+<p><strong>Expertise:</strong> Software and model development</p>
+<p><strong>Role in the Project:</strong> Clinical Advisor / Clinical Informatics Consultant<br />
+<strong>Name:</strong> TBD<br />
+<strong>Expertise:</strong> Clinical workflow, follow-up care, clinical annotation, and health-information-system integration<br />
+<strong>Role:</strong> Define clinical eligibility criteria and annotation guidelines; adjudicate ambiguous cases; assess clinical validity and review burden; advise on workflow integration and pilot success criteria</p>
+</blockquote>
+<p><strong><br />
+</strong></p>
+<ol start="3" type="A">
+<li><p><strong>RESEARCH PROPOSAL FORM - FULL PROPOSAL</strong></p></li>
+</ol>
+<ol type="1">
+<li><p><strong>The Research Plan</strong>:</p></li>
+</ol>
+<div class="box">
+<p><em>Scope</em></p>
+<p>The core method underlying CareLoop was developed and evaluated in our previous research [1]. This POC extends that method and carries it through engineering and validation to a pre-pilot prototype evaluated on real, de-identified clinical text. The extraction architecture and temporal-normalization method are adapted from the previous research, while the project extends their scope, validates performance on real clinical text, and integrates them into a deployable prototype. The aim is to close the practical gap between that result and a usable product: transfer to real text, coverage of an extended follow-up record, calibration, standards-based integration, and early evidence of value.</p>
+<h4 id="problem-prior-research-and-poc-objectives">Problem, Prior Research, and POC Objectives</h4>
+<p><strong>The problem.</strong> Clinicians constantly decide what should happen next (e.g., a repeat test, a scan, a referral), but write these as sentences, so the systems that schedule, order, remind, and audit rarely receive them in a usable form. As a result, follow-up is frequently missed, delayed, or misinterpreted, a recognized patient-safety and cost problem and a contributor to diagnostic error; ambulatory test-result follow-up and referral completion are well-documented weak points [2,5,11]. </p>
+<p><strong>What CareLoop is and the method it uses.</strong> CareLoop is a Clinical Intent Management (CIM) platform: it makes <em>clinical intent</em>, what should happen next for the patient, computable. While clinical intent appears across many use cases [16], this POC starts with a focused but high-value subcase: extracting clinical follow-up instructions. For a follow-up instruction such as "repeat the blood test in two weeks," it produces a structured, source-linked Actionable Clinical Record <strong>(ACR)</strong> holding the <em>action</em>, a normalized <em>due date</em> when the text gives one, the <em>source span</em> it came from, and a <em>confidence flag</em> for review. The method behind this was built in our previous research [1]: a hybrid design in which a learned component finds and links the action and its time expression, an explicit symbolic component normalizes the action and converts relative timing ("in two weeks" → a calendar date), and a selective-prediction step routes low-confidence cases to a clinician.</p>
+<p><strong>Existing market barriers</strong>. The initial economic buyer is expected to be hospital or HMO quality, safety, and care-coordination units, while operational users are clinicians and staff responsible for completing follow-up. Existing approaches rely on manual EHR task entry, retrospective review, or workflow systems that can track a task only after it has been structured and entered. The unresolved upstream problem is converting follow-up intent already present in clinical text into a reliable workflow object without adding clinician data-entry burden. Adoption therefore depends on three factors: reliable extraction from heterogeneous clinical text, integration with existing EHR workflows, and sufficient precision and provenance to support clinical trust. The PoC directly tests these three barriers.</p>
+<p><strong>The POC question</strong> is whether the fixed hybrid extraction and normalization approach from [1], extended using established supervised methods, can produce source-supported follow-up records from real de-identified clinical notes at a level of precision and review burden suitable for a pre-pilot system, and whether accepted records can be carried without loss of required information into a standards-based clinical workflow.</p>
+<p><strong>Innovation and what the POC extends.</strong> The proposed innovation is a system that converts free-text clinical intent into a structured, source-linked Actionable Clinical Record, using hybrid AI extraction, explicit normalization of actions and timing, and standard interfaces for integration into clinical workflows. An explicit symbolic layer holds the parts that must be exact: the normalized action, the computed date, and the source span, so every ACR is auditable rather than a fluent guess. Existing clinical NLP systems [7–9] extract concepts and relations, and commercial radiology systems can identify and structure specific follow-up recommendations [21]. CareLoop’s proposed differentiation is the broader operational representation of prospective clinical intent: source-supported action and timing together with explicit target, actor, condition and dependency fields, calibrated human review, and deterministic mapping into interoperable workflow resources. The innovation therefore lies not in task tracking itself, but in creating a reusable, auditable Clinical Intent Management layer between heterogeneous clinical text and downstream care workflows. On the controlled 2,000-note benchmark in [1], the completed method achieved action–time Pair F1 of 0.997 on seen and 0.986 on unseen action types, substantially outperforming the evaluated general-purpose LLM baselines. These results establish the technical starting point; the present POC tests whether the approach transfers to heterogeneous real clinical text. It extends the same established approach to an enriched ACR comprising target, actor, condition, and dependency fields, to heterogeneous real clinical text, and to calibrated review and standards-based integration.</p>
+<p><strong>Positioning versus existing approaches.</strong></p>
+<table>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 23%" />
+<col style="width: 27%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Existing approach</strong></th>
+<th><strong>Strength</strong></th>
+<th><strong>Limitation for follow-up</strong></th>
+<th><strong>CareLoop differentiation</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Manual EHR task/order entry</td>
+<td>Reliable when entered</td>
+<td>Requires clinician action or data entry</td>
+<td>Extracts intent that is already present in text</td>
+</tr>
+<tr class="even">
+<td>Rule/NER clinical NLP</td>
+<td>Auditable extraction</td>
+<td>Entity-centric, not workflow intent</td>
+<td>Action + timing + conditions + provenance</td>
+</tr>
+<tr class="odd">
+<td>General-purpose LLM summarization</td>
+<td>Flexible</td>
+<td>Output not necessarily structured or auditable</td>
+<td>Source-linked, constrained representation</td>
+</tr>
+<tr class="even">
+<td>Microsoft PowerScribe One</td>
+<td>Extracts radiology follow-up recommendations into structured fields; supports review and downstream EHR use [21]</td>
+<td>Focused on the radiology reporting workflow</td>
+<td>Targets clinical intent across heterogeneous clinical text, with conditions/dependencies, provenance, calibrated review, and standards-based workflow mapping</td>
+</tr>
+<tr class="odd">
+<td>Workflow/follow-up systems</td>
+<td>Track known tasks</td>
+<td>Require the structured task to exist first</td>
+<td>Supplies the missing structured task from text</td>
+</tr>
+</tbody>
+</table>
+<h4 id="project-goals-and-tasks">Project Goals and Tasks</h4>
+<p>The plan is organized as six tasks in a dependency chain: the gold dataset (Task 1) enables engineering adaptation (Task 2) and validation (Task 3), which enable EHR integration (Task 4) and hosted deployment (Task 5); market validation and commercialization (Task 6) run alongside. Validation targets are fixed before any model adaptation. Tasks 1–5 are carried out using publicly available and/or credentialed de-identified research datasets, providing a complete technical validation path. Task 6 complements this work through partner-based market discovery and product feedback, helping assess workflow fit, pilot readiness, and commercialization potential, without involving patient data.</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 22%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Task (months)</strong></th>
+<th><strong>Objective</strong></th>
+<th><strong>Scope</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>T1:</strong>  Data preparation &amp; labeling</td>
+<td>Create a gold-standard ACR dataset on real de-identified text</td>
+<td>Harmonize follow-up text from CLIP [13], i2b2 2012 [15], and MIMIC-IV discharge instructions [14]; define ACR guidelines; double-label action, target, timing, actor, condition, dependency, and provenance.</td>
+</tr>
+<tr class="even">
+<td><strong>T2:</strong>  Engineering adaptation &amp; extended ACR</td>
+<td>Extend from action–time to an enriched follow-up ACR on real text</td>
+<td>Extend the ACR with target, actor, condition, and dependency extracted from text, plus provenance and confidence, using the neuro-symbolic approach. </td>
+</tr>
+<tr class="odd">
+<td><strong>T3:</strong>  Model validation</td>
+<td>Demonstrate reliable, calibrated performance on real text</td>
+<td>Locked single-use test; transfer and unseen-type evaluation; baselines and ablations; confidence calibration and selective review; clinician-adjudicated evaluation. </td>
+</tr>
+<tr class="even">
+<td><strong>T4:</strong> Integration</td>
+<td>Enable standards-based EHR integration</td>
+<td>Map reviewed ACRs to FHIR ServiceRequest/Task with Provenance, implement a SMART on FHIR review surface, and validate conformance and ACR→FHIR→ACR round-trip preservation. CDS Hooks and additional FHIR resources will be implemented where required by the target pilot workflow</td>
+</tr>
+<tr class="odd">
+<td><strong>T5:</strong> Hosted prototype deployment</td>
+<td>Demonstrate a trialable pre-pilot prototype</td>
+<td>Build a secure, access-controlled hosted prototype on de-identified data (simulated workflow, no autonomous write-back). </td>
+</tr>
+<tr class="even">
+<td><strong>T6:</strong>  Market validation</td>
+<td>Validate demand, defensibility, and route to market</td>
+<td>Conduct customer discovery across buyer and user groups, identify potential design partners and pilot requirements, and seek an LOI or agreed pilot specification. Assess freedom to operate and protectable IP, pursue protection where justified, and define the commercialization and licensing strategy.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Milestones.</strong> M8: frozen annotation guideline and gold dataset; M14: extended-ACR prototype; M20: locked validation and minimum FHIR integration completed; M24: hosted pre-pilot prototype together with market-validation, ROI, IP/FTO, and pilot-preparation deliverables.</p>
+<h4 id="tasks-in-detail">Tasks in Detail</h4>
+<p><strong>Task 1. Gold-standard data.</strong> No public corpus carries the full follow-up ACR labels, so the measurement instrument is a human-labeled gold standard built over de-identified CLIP [13], MIMIC-IV-Note [14], and i2b2/n2c2 2012 [15] (reusing the CLIP action taxonomy and i2b2/THYME TIMEX3 guidelines to lower cost). The PoC validates on credentialed English-language US clinical corpora, providing an appropriate basis for initial English-language deployment and commercialization. EHR interoperability is independently validated through international standards; Hebrew or mixed-language adaptation would be a later site-specific localization rather than a PoC outcome. A pilot prevalence estimate will determine the final sampling allocation across corpora. If eligible instructions are sparser than expected, development data will be enriched from corpus components with higher follow-up prevalence while retaining a separately sampled natural-prevalence test set for unbiased detection evaluation. Trained clinical-background annotators mark all eligible instructions on sampled <em>source notes</em> (negatives and non-actionable mentions retained, so detection recall and false-positive rate are measurable) and annotate the semantic fields; the guideline is frozen after a pilot. A stratified subset will be independently double-annotated to estimate inter-annotator agreement, computed before adjudication with element-appropriate metrics (κ/α, span F1, date agreement), and the clinical advisor will resolve disagreements and ambiguous cases.</p>
+<p><strong>Corpus and annotation scale.</strong> The target corpus contains approximately 1,500–2,000 sampled notes and at least 1,000 eligible follow-up instructions, plus negative and non-actionable examples. Target agreement is span F1 ≥ 0.85 for span fields, κ/α ≥ 0.75 for categorical fields, and ≥ 0.90 agreement on normalized dates; failure to reach these thresholds triggers guideline revision and a second pilot.</p>
+<p><strong>Task 2. Engineering adaptation and extended-ACR implementation.</strong> The action–date engine is extended to the remaining ACR fields and adapted to real text using established extraction and normalization techniques; the scientific architecture, learning objective, and temporal-normalization method are fixed, and the PoC addresses implementation, adaptation, and validation rather than development of a new basic method:</p>
+<table>
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>ACR element to add</strong></th>
+<th><strong>Existing technique applied</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>actor, dependency (relations)</td>
+<td>supervised relation extraction (as in the completed pipeline)</td>
+</tr>
+<tr class="even">
+<td>condition, target</td>
+<td>span classification / typed NER</td>
+</tr>
+<tr class="odd">
+<td>action normalization</td>
+<td>ontology mapping (SNOMED CT / LOINC)</td>
+</tr>
+<tr class="even">
+<td>timing</td>
+<td>TIMEX3 normalization (i2b2-2012 / THYME guidelines)</td>
+</tr>
+<tr class="odd">
+<td>confidence, review flag</td>
+<td>selective prediction + probability calibration</td>
+</tr>
+</tbody>
+</table>
+<p>The added fields are recovered using the same established extraction framework, trained on the labeled data. For example, a condition such as “if symptoms persist” is represented separately from the action it governs. Action normalization reuses existing clinical ontologies such as SNOMED CT and LOINC; no new ontology will be developed, although a small, curated mapping of common follow-up action types may be required.</p>
+<p><strong>Task 3. Locked validation.</strong> The corpus splits into train/adaptation, validation, and a single-use test, patient-/note-disjoint; the guideline, unseen-type vocabulary, configuration, baseline prompts/rules, and confidence threshold are frozen before the test, which is never used for tuning. <strong>Experiments:</strong> E1 zero-adaptation transfer of the frozen [1] pipeline, then adaptation, then one locked test; E2 unseen types + source-supported fields; E3 ablations (symbolic vs non-symbolic normalization; calibrated vs uncalibrated review); E4 baselines (frozen pre-POC pipeline, deterministic rules, fixed-version LLMs) on identical notes/schema; E5 threshold selection + risk-coverage; E6 clinician workflow + FHIR conformance. </p>
+<p><strong>Technical success criteria.</strong> On the locked patient-/note-disjoint test set, CareLoop must demonstrate both reliable detection and a practical level of human review. Eligible follow-up instructions must be detected with recall ≥0.80. Among detected records, the selective-prediction system must achieve precision ≥0.95 while automatically accepting at least 70% of records without manual review. Temporal normalization must match the gold-standard date, interval, or event-relative representation under the predefined normalization policy for ≥90% of resolvable expressions; absolute date error will additionally be reported for expressions resolving to a specific calendar date. Detection precision/recall/F1, selective coverage, calibration, per-field performance, and performance on predeclared unseen action types will be reported with 95% confidence intervals.</p>
+<p><strong>Integration gate</strong>: mandatory information must be preserved in ACR→FHIR→ACR round-trip tests with no critical FHIR conformance failures.</p>
+<p><strong>Task 4. Integration.</strong> Reviewed ACRs will be mapped deterministically to a minimum FHIR workflow representation consisting of ServiceRequest/Task with Provenance, preserving source linkage and confidence. A SMART on FHIR application will provide the clinician-facing review surface. Conformance and ACR→FHIR→ACR preservation will be tested using standard FHIR tooling. CDS Hooks, CarePlan, CommunicationRequest, and additional workflow resources will be added only where required by the design-partner pilot specification.</p>
+<p><strong>Task 5. Hosted prototype deployment.</strong> The objective is a secure, reproducible hosted product that a customer can trial with minimal setup. The engineering design is a containerized microservice stack: an <em>ingestion service</em> (file upload or a FHIR endpoint) feeds a work queue; stateless <em>extraction workers</em> serve the model behind an internal API with batched inference; a <em>review web application</em> presents each ACR with its source span highlighted, its normalized date and confidence, and accept/edit/reject controls for the human-in-the-loop; and a <em>FHIR-export service</em> (shared with Task 4) publishes accepted ACRs.</p>
+<p><strong>External evidence of market need.</strong> Follow-up reliability is already recognized as an operational quality problem requiring dedicated workflows. The American College of Radiology reports that up to 10% of radiology reports contain follow-up recommendations and that approximately half of the recommended examinations are not completed; it operates a national Recommendations Follow-Up Improvement Collaborative addressing this gap [4]. CMS separately treats Closing the Referral Loop as a high-priority quality measure [20]. Recent clinical-informatics literature describes systematic follow-up management as a workflow spanning identification, communication, tracking to completion, and outcome assessment, and identifies AI as a means of reducing the manual effort required across these stages [19]. These signals establish an existing institutional need; Task&nbsp;6 therefore focuses on validating CareLoop-specific buyer, workflow, integration, pricing, and pilot hypotheses.</p>
+<p><strong>Task 6. Market validation.</strong> External evidence establishes follow-up reliability as an existing healthcare workflow and quality problem; Task&nbsp;6 tests the commercial hypotheses specific to CareLoop. Structured customer discovery with health systems, health plans, care-coordination units, and EHR/workflow vendors will identify the economic buyer, operational user, current workflow and alternatives, integration requirements, acceptable review burden, procurement constraints, pricing basis, and pilot success criteria. We will seek to identify a suitable design partner and obtain an LOI, pilot commitment, or jointly agreed pilot specification defining workflow, integration requirements, and success criteria. Clinical experts will participate as paid consultants evaluating de-identified artifacts; no personal research data will be collected.</p>
+<p><strong>IP and commercialization plan.</strong> A freedom-to-operate review covers the POC assets, and where it supports one, a provisional patent is filed via a patent attorney. The closing output is a go-to-market and licensing plan naming the initial segment and route, together with an asset register documenting ownership and licensing status for the ACR schema, annotation guidelines, trained and calibrated models, integration components, and project-specific derived annotation assets.</p>
+<p><strong>Expected impact.</strong> CareLoop is intended to make follow-up instructions that are currently embedded in text available to existing tracking, reminder, and audit workflows. Prior structured follow-up programs have produced substantial improvements in completion of recommended imaging; the FIND program, for example, increased completion from <strong>30.8% to 50.7%</strong> [12]. This establishes the potential operational value of effective follow-up workflows. CareLoop addresses the upstream information gap required to supply those workflows directly from free clinical text; downstream clinical and operational effects would be evaluated in a subsequent real-world pilot.</p>
+<p><strong>ROI.</strong> Economic feasibility will be assessed at the site level using follow-up volume, baseline non-completion, expected improvement, value per completed follow-up, and software plus human-review costs. The primary output will be a break-even threshold, expressed as the number or percentage of additional completed follow-ups required for a site to cover CareLoop operating costs. Task 6 will estimate these inputs through customer discovery and prospective-partner data, using published results such as [12] only as external benchmarks. Conservative, base, and higher-impact scenarios will be compared together with per-site, per-volume, and licensing revenue models.</p>
+<p><strong>Planned final product.</strong> By month 24, the POC will deliver a validated pre-pilot CareLoop prototype with validated extraction of the core follow-up record and evaluated extraction of target, actor, condition, and dependency fields, standards-based EHR integration, and a secure hosted review workflow, along with the market, IP, and ROI evidence needed for a clinical pilot and commercialization. This POC establishes the first focused implementation of the broader Clinical Intent Management vision, which can later extend to additional clinical workflows and intent types.</p>
+</div>
+<ol start="2" type="1">
+<li><p><strong>Schedules and Work Plan (Gantt)</strong></p></li>
+</ol>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 61%" />
+<col style="width: 3%" />
+<col style="width: 2%" />
+<col style="width: 0%" />
+<col style="width: 5%" />
+<col style="width: 6%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="gh">#</th>
+<th><strong>Task</strong></th>
+<th colspan="2"><strong>1-3</strong></th>
+<th colspan="2"><strong>4-8</strong></th>
+<th><strong>9-14</strong></th>
+<th><strong>15-19</strong></th>
+<th><strong>20-24</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Data preparation &amp; labeling</td>
+<td colspan="2" class="on"></td>
+<td colspan="2" class="on"></td>
+<td class="off"></td>
+<td class="off"></td>
+<td class="off"></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Engineering adaptation (extended ACR)</td>
+<td colspan="2" class="off"></td>
+<td colspan="2" class="on"></td>
+<td class="on"></td>
+<td class="off"></td>
+<td class="off"></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Model validation</td>
+<td colspan="2" class="off"></td>
+<td colspan="2" class="off"></td>
+<td class="on"></td>
+<td class="on"></td>
+<td class="off"></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td colspan="2">EHR integration (FHIR / SMART on FHIR)</td>
+<td colspan="2" class="off"></td>
+<td class="off"></td>
+<td class="on"></td>
+<td class="on"></td>
+<td class="off"></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Hosted prototype deployment</td>
+<td colspan="2" class="off"></td>
+<td colspan="2" class="off"></td>
+<td class="off"></td>
+<td class="on"></td>
+<td class="on"></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Market validation &amp; commercialization</td>
+<td colspan="2" class="on"></td>
+<td colspan="2" class="on"></td>
+<td class="on"></td>
+<td class="on"></td>
+<td class="on"></td>
+</tr>
+</tbody>
+</table>
+<ol start="3" type="1">
+<li><p><strong>Bibliography</strong>:</p></li>
+</ol>
+<p>* marks the five sources most relevant to the proposal, excluding those authored by the applicants.</p>
+<ol type="1">
+<li><p>Laufer, M., Aperstein, Y., &amp; Apartsin, A. (2026). Reliable Extraction of Clinical Follow-Up Instructions: A Hybrid Neural-Symbolic Pipeline. arXiv:2605.26560. <a href="https://doi.org/10.48550/arXiv.2605.26560">https://doi.org/10.48550/arXiv.2605.26560</a></p></li>
+<li><p><strong>(*)</strong> Callen, J. L., Westbrook, J. I., Georgiou, A., &amp; Li, J. (2012). Failure to follow-up test results for ambulatory patients: a systematic review. Journal of General Internal Medicine, 27(10), 1334–1348. <a href="https://doi.org/10.1007/s11606-011-1949-5">https://doi.org/10.1007/s11606-011-1949-5</a>.</p></li>
+<li><p>Casalino, L. P., Dunham, D., Chin, M. H., et al. (2009). Frequency of failure to inform patients of clinically significant outpatient test results. Archives of Internal Medicine, 169(12), 1123–1129. <a href="https://doi.org/10.1001/archinternmed.2009.130">https://doi.org/10.1001/archinternmed.2009.130</a>.</p></li>
+<li><p>American College of Radiology. Recommendations Follow-Up Improvement Collaborative. ACR Learning Network. Accessed 2026.</p></li>
+<li><p>Patel, M. P., Schettini, P., O’Leary, C. P., Bosworth, H. B., Anderson, J. B., &amp; Shah, K. P. (2018). Closing the referral loop: an analysis of primary care referrals to specialists in a large health system. Journal of General Internal Medicine, 33(5), 715–721. https://doi.org/10.1007/s11606-018-4392-z.</p></li>
+<li><p>Cohen-Yatziv, L., Cohen, M. J., Halevy, J., &amp; Kaliner, E. (2019). No-shows in ambulatory clinics and non-utilized appointments for elective operations in selected surgical departments at a tertiary hospital in Israel. Israel Journal of Health Policy Research, 8, 64. <a href="https://doi.org/10.1186/s13584-019-0333-5">https://doi.org/10.1186/s13584-019-0333-5</a></p></li>
+<li><p>Friedman, C., Shagina, L., Lussier, Y., &amp; Hripcsak, G. (2004). Automated encoding of clinical documents based on natural language processing. Journal of the American Medical Informatics Association, 11(5), 392–402. https://doi.org/10.1197/jamia.M1552.</p></li>
+<li><p>Savova, G. K., Masanz, J. J., Ogren, P. V., et al. (2010). Mayo Clinical Text Analysis and Knowledge Extraction System (cTAKES): architecture, component evaluation and applications. Journal of the American Medical Informatics Association, 17(5), 507–513. <a href="https://doi.org/10.1136/jamia.2009.001560">https://doi.org/10.1136/jamia.2009.001560</a>.</p></li>
+<li><p>Soysal, E., Wang, J., Jiang, M., et al. (2018). CLAMP: a toolkit for efficiently building customized clinical natural language processing pipelines. Journal of the American Medical Informatics Association, 25(3), 331–336. <a href="https://doi.org/10.1093/jamia/ocx132">https://doi.org/10.1093/jamia/ocx132</a>.</p></li>
+<li><p>Shah, S. J., Cronin, P., Hong, C. S., et al. (2016). Targeted reminder phone calls to patients at high risk of no-show for primary care appointment: a randomized trial. Journal of General Internal Medicine, 31(12), 1460–1466. <a href="https://doi.org/10.1007/s11606-016-3813-0">https://doi.org/10.1007/s11606-016-3813-0</a>.</p></li>
+<li><p>Newman-Toker, D. E., Nassery, N., Schaffer, A. C., et al. (2024). Burden of serious harms from diagnostic error in the USA. BMJ Quality &amp; Safety, 33(2), 109–120. <a href="https://doi.org/10.1136/bmjqs-2021-014130">https://doi.org/10.1136/bmjqs-2021-014130</a>.</p></li>
+<li><p>(<strong>*</strong>) Zaki-Metias, K. M., MacLean, J. J., Satei, A. M., et al. (2023). The FIND Program: improving follow-up of incidental imaging findings. Journal of Digital Imaging, 36, 804–811. <a href="https://doi.org/10.1007/s10278-023-00780-6">https://doi.org/10.1007/s10278-023-00780-6</a>.</p></li>
+<li><p>(<strong>*</strong>) Mullenbach, J., Pruksachatkun, Y., Adler, S., et al. (2021). CLIP: a dataset for extracting action items for physicians from hospital discharge notes. Proceedings of ACL-IJCNLP, 1365–1378. Dataset version 1.0.0, PhysioNet, <a href="https://doi.org/10.13026/kw00-z903">https://doi.org/10.13026/kw00-z903</a>.</p></li>
+<li><p>Johnson, A., Pollard, T., Horng, S., Celi, L. A., &amp; Mark, R. (2023). MIMIC-IV-Note: de-identified free-text clinical notes (version 2.2). PhysioNet. <a href="https://doi.org/10.13026/1n74-ne17">https://doi.org/10.13026/1n74-ne17</a>.</p></li>
+<li><p>(<strong>*</strong>) Sun, W., Rumshisky, A., &amp; Uzuner, Ö. (2013). Evaluating temporal relations in clinical text: 2012 i2b2 Challenge. Journal of the American Medical Informatics Association, 20(5), 806–813. <a href="https://doi.org/10.1136/amiajnl-2013-001628">https://doi.org/10.1136/amiajnl-2013-001628</a>.</p></li>
+<li><p>Apartsin, A., &amp; Aperstein, Y. (2026). Three Generations of Healthcare IT: From the Digital Record to the Computable Care Process. arXiv:2608.08806. <a href="https://doi.org/10.48550/arXiv.2608.08806">https://doi.org/10.48550/arXiv.2608.08806</a></p></li>
+<li><p>Health Level Seven International. FHIR Release 4 (R4): Task, ServiceRequest, CarePlan, CommunicationRequest, and Provenance. HL7 FHIR v4.0.1.</p></li>
+<li><p>Health Level Seven International. CDS Hooks Specification and SMART App Launch Implementation Guide; Office of the National Coordinator for Health IT. Inferno FHIR Conformance Testing.</p></li>
+<li><p>(<strong>*</strong>) O’Connor, S. D., Alkasab, T., Samuel, J. K. R., &amp; Sippo, D. A. (2026). The Potential Role of Artificial Intelligence in Systematic Follow-Up Recommendation Tracking and Outcome Assessment. <em>Journal of the American College of Radiology, 23</em>(3), 410–420. <a href="https://doi.org/10.1016/j.jacr.2025.10.019">https://doi.org/10.1016/j.jacr.2025.10.019</a></p></li>
+<li><p>Centers for Medicare &amp; Medicaid Services. Closing the Referral Loop: Receipt of Specialist Report. Quality ID 374; eCQM CMS50v12. <a href="https://qpp.cms.gov/mips/explore-measures/ecqm/CMS50v12">qpp.cms.gov/mips/explore-measures/ecqm/CMS50v12</a> (accessed 2026).</p></li>
+<li><p>Microsoft. PowerScribe One: Follow-Up Recommendations. <a href="https://support.microsoft.com/en-us/powerscribe-one/follow-up-recommendations">support.microsoft.com/powerscribe-one/follow-up-recommendations</a> (accessed 2026).</p></li>
+</ol>
+<ol start="4" type="1">
+<li><p><strong>BIOGRAPHICAL SUMMARY-</strong> BIOSKETCH</p></li>
+</ol>
+<p><strong>Name:</strong></p>
+<p>Dr. Alexander Apartsin</p>
+<p><strong>Position Title:</strong></p>
+<p>Senior Lecturer, School of Computer Science, Holon Institute of Technology</p>
+<p><strong>Education/Training</strong>:</p>
+<table>
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Institution and Location</strong></th>
+<th><strong>Degree</strong></th>
+<th><strong>MM/YY</strong></th>
+<th><strong>Field of Study</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Technion, Israel Institute of Technology, Haifa</td>
+<td>B.Sc.</td>
+<td>1995</td>
+<td>Computer Science</td>
+</tr>
+<tr class="even">
+<td>Weizmann Institute of Science, Rehovot</td>
+<td>M.Sc.</td>
+<td>2005</td>
+<td>Computer Science (Computer Vision)</td>
+</tr>
+<tr class="odd">
+<td>IEEE Computer Society</td>
+<td>CSDP</td>
+<td>2005</td>
+<td>Software Development Methodologies</td>
+</tr>
+<tr class="even">
+<td>Polytechnic Institute of New York University</td>
+<td>M.Sc.</td>
+<td>2006</td>
+<td>Technology Management and Innovation</td>
+</tr>
+<tr class="odd">
+<td>PDMA: Product Development and Management Association</td>
+<td>NPDP</td>
+<td>2006</td>
+<td>New Product Development Methodologies</td>
+</tr>
+<tr class="even">
+<td>Tel Aviv University, Tel Aviv</td>
+<td>Ph.D.</td>
+<td>2012</td>
+<td>Computer Science, Machine Learning and Signal Processing</td>
+</tr>
+<tr class="odd">
+<td>Weizmann Institute of Science, Rehovot</td>
+<td>Postdoc</td>
+<td>2013</td>
+<td>Computer Vision and Machine Learning</td>
+</tr>
+</tbody>
+</table>
+<ol type="A">
+<li><p><strong>Personal Statement</strong></p></li>
+</ol>
+<p>This PoC requires a combination of scientific, engineering, product-development, and commercialization capabilities. My career has developed across these areas, combining research in reliable language-information extraction with the development of operational AI systems, end-to-end new-product development, and entrepreneurship.</p>
+<p>My academic background is in machine learning across a range of application domains. I hold a Ph.D. in machine learning and signal processing from Tel Aviv University. My doctoral research in machine learning and signal processing resulted in seven first-author publications and was followed by postdoctoral research at the Weizmann Institute. My subsequent academic and industry work has focused on translating AI methods into reliable operational systems, including language-processing and information-extraction applications. At HIT, I lead a pragmatic AI research program focused on developing AI systems that remain reliable, interpretable, and usable under real-world conditions. The program combines academic research, student participation, and industry collaboration.</p>
+<p>A substantial part of my current and previous work, in both academia and industry, has focused on reliably extracting and processing information from text using natural language processing, machine learning, and, more recently, LLMs. Further details are available at apartsin.com/research/robust-language-ai.html. In particular, my recent work provides the scientific foundation for CareLoop, including the hybrid neural-symbolic method on which this proposal builds [1].</p>
+<p>Much of my industry career has focused on applying AI methods toward operational systems and products. At the Motorola Solutions Israel Innovation Center, I led work on AI for public-safety applications spanning image, text, video, and audio. As VP of AI at harmon.ie, I worked on large-scale enterprise document-intelligence systems to extract and organize information from unstructured document collections. At Questar, I led research and engineering teams developing automotive-telematics AI.</p>
+<p>I have also co-founded and provided technical leadership to several technology ventures. At SearchNG, I helped establish the company and led its capital-raising activities. This practical experience is complemented by formal training in innovation and product development: an M.S. in Management with a focus on innovation from NYU Polytechnic and the PDMA New Product Development Professional (NPDP) certification, covering new-product development and commercialization from opportunity identification through launch.</p>
+<p>Together, these experiences provide a practical basis for carrying the PoC from scientific validation through engineering implementation and toward a deployable product and commercialization path.</p>
+<p><strong>B. Selected Positions (selected)</strong></p>
+<ul>
+<li><p>2024 to present: Senior Lecturer, School of Computer Science (HIT).</p></li>
+<li><p>2020 to 2024: Head of Data Science, Questar Automotive</p></li>
+<li><p>2019-2020: VP Artificial Intelligence, Harmon.ie</p></li>
+<li><p>2015 to 2019: Head of AI Research, Motorola Solutions Israel Innovation Center.</p></li>
+<li><p>2013-2019: AVP Data Science, Citigroup TLV Innovation Lab</p></li>
+<li><p>1999-2015: Misc. software companies, roles including: Architect, R&amp;D Manager, CTO, and Founder</p></li>
+</ul>
+<p><strong>C. Selected Publications Relevant to the Proposed Project</strong></p>
+<ol type="1">
+<li><p>Laufer, M., Aperstein, Y., &amp; <u>Apartsin</u>, A. (2026). Reliable Extraction of Clinical Follow-Up Instructions: A Hybrid Neural-Symbolic Pipeline. arXiv:2605.26560, <a href="https://doi.org/10.48550/arXiv.2605.26560">https://doi.org/10.48550/arXiv.2605.26560</a>. (<em>Not yet peer-reviewed; submitted for peer review; scientific basis for the proposal.)</em></p></li>
+<li><p>Atia, T., Aperstein, Y., &amp; <u>Apartsin</u>, A. (2026). SeaAlert: Robust Severity Classification and LLM-Based Information Extraction for Noisy Maritime Distress Communications. IEEE Access, 14, 101292–101303. <a href="https://doi.org/10.1109/ACCESS.2026.3709004">https://doi.org/10.1109/ACCESS.2026.3709004</a>.</p></li>
+<li><p>Aperstein, Y., Moran, E., &amp; <u>Apartsin</u>, A. (2026). IRC-Bench: Recognizing Entities from Contextual Cues in First-Person Reminiscences. Machine Learning and Knowledge Extraction, 8(7), 186. <a href="https://doi.org/10.3390/make8070186">https://doi.org/10.3390/make8070186</a>.</p></li>
+<li><p>Werthaim, M., Kimhi, M., <u>Apartsin</u>, A., &amp; Aperstein, Y. (2026). A Benchmark for Evaluating Diagnostic Questioning Efficiency of LLMs in Patient Conversations. Scientific Reports, 16, 6121. https://doi.org/10.1038/s41598-026-37022-y</p></li>
+<li><p>Aperstein, Y., Gottlib, A., Benita, G., &amp; <u>Apartsin</u>, A. (2025). Explainable Semantic Text Relations: A Question-Answering Framework for Comparing Document Content. Information, 16(12), 1090. <a href="https://doi.org/10.3390/info16121090.">https://doi.org/10.3390/info16121090.</a></p></li>
+</ol>
+<p><strong>D. Research Support</strong>: None</p>
+<ol start="5" type="1">
+<li><p><strong>REQUESTED BUDGET</strong></p></li>
+</ol>
+<p><strong>Total funding requested:</strong> 350000 NIS</p>
+<p><strong>Duration (months):</strong> 24</p>
+<p><strong>Currency:</strong> ILS(NIS)</p>
+<table>
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 10%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Category</strong></th>
+<th><strong>Sum</strong></th>
+<th><strong>Budget Justification</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Personnel- Research Assistants, Students</td>
+<td>150,000</td>
+<td>Research assistant / MSc student (24 months, part-time): data preparation and labeling support, supervised model adaptation, core follow-up extraction and ACR enrichment, locked validation, FHIR integration, and prototype engineering</td>
+</tr>
+<tr class="even">
+<td>Technical Support and Consulting</td>
+<td>30,000</td>
+<td>Clinical and clinical-informatics consultation: clinical use-case definition; review of the ACR schema and annotation guidelines; adjudication of ambiguous cases; assessment of clinical validity, error categories, and review burden; workflow integration; and definition of pilot requirements and success criteria.</td>
+</tr>
+<tr class="odd">
+<td>Professional Services</td>
+<td>75,000</td>
+<td><p>Clinical data labeling and expert annotation: 50,000. Primary evaluation uses publicly available and/or credentialed de-identified research datasets (CLIP, i2b2 2012, and MIMIC-IV-Note).</p>
+<p>Intellectual property and commercialization: 25,000, covering prior-art and freedom-to-operate review, assessment of protectable project assets, and, if justified by that assessment, drafting and filing of an appropriate patent application through a patent attorney, together with commercialization and licensing planning</p></td>
+</tr>
+<tr class="even">
+<td>Equipment</td>
+<td>0</td>
+<td>Not requested</td>
+</tr>
+<tr class="odd">
+<td>Computer Equipment</td>
+<td>32,500</td>
+<td>Cloud computing services (recorded under the form’s Computer Equipment category): secure cloud compute for model adaptation, locked evaluation, hosted prototype deployment, and reproducible integration testing.</td>
+</tr>
+<tr class="even">
+<td>Consumables</td>
+<td>0</td>
+<td>Not requested</td>
+</tr>
+<tr class="odd">
+<td>Administrative</td>
+<td>0</td>
+<td>Not Requested</td>
+</tr>
+<tr class="even">
+<td>Overhead (up to 15%)</td>
+<td>52,500</td>
+<td>Retained by HIT for support, monitoring, and oversight per the call.</td>
+</tr>
+<tr class="odd">
+<td>Other</td>
+<td>10,000</td>
+<td>External prototype evaluation, integration demonstration, structured customer-validation activities, and commercialization deliverables required for pilot readiness.</td>
+</tr>
+</tbody>
+</table>
+<ol start="6" type="1">
+<li><p><strong>APPLICABILITY APPENDIX</strong></p></li>
+</ol>
+<div class="box">
+<p><em>Opportunity and Scalability</em></p>
+<p><strong>External evidence supports the market need.</strong> The American College of Radiology operates a dedicated Recommendations Follow-Up Improvement Collaborative [4], CMS treats closing the referral loop as a high-priority quality measure [20], and recent clinical-informatics work identifies AI-supported identification and tracking as a means of reducing manual follow-up workload [19]. These signals indicate that follow-up reliability is already an institutional quality and workflow priority; the CareLoop PoC therefore tests the remaining product-specific adoption, integration, pricing, and pilot hypotheses.</p>
+<p>CareLoop is a Clinical Intent Management (CIM) platform that addresses a missing layer in healthcare IT: clinical intent, meaning what is supposed to happen next for the patient. Current EHRs store records and structured facts, but follow-up instructions such as “repeat the blood test in two weeks” or “refer to cardiology if symptoms persist” often remain only in free text and therefore cannot be reliably monitored. CareLoop converts these instructions into structured, auditable, source-linked actions. We view CIM as a third generation of healthcare IT: from records, to facts, to computable clinical intent.</p>
+<p>The initial product focuses on one well-defined, high-value use case: clinical follow-up instructions. It integrates with existing systems through standards such as FHIR, SMART on FHIR, and CDS Hooks, without replacing the EHR or adding new data-entry burden. The same CIM platform can later support referrals, discharge instructions, radiology recommendations, handovers, and patient messages. This creates a clear path from a focused initial product to a broader platform: start with one high-value workflow, then expand within the same customer and through EHR and workflow-vendor distribution.</p>
+<p>The PoC is designed to validate the core CIM technology in a defined use case and, if successful, provide the basis for expansion into additional clinical workflows and a broader Clinical Intent Management platform.</p>
+<h4 id="commercialization-pathways">Commercialization Pathways</h4>
+<p>CareLoop will follow a staged commercialization route. During the PoC, the first objective is to identify a health-system or health-plan design partner, validate workflow fit, and agree the requirements and success criteria for a real-world pilot. Following successful PoC completion, the first pilot can be initiated with that partner. Successful pilot evidence can then support direct deployment and creation of a reference customer. Scaling would then focus on licensing or OEM integration with EHR and clinical-workflow vendors, allowing the same CIM capability to be distributed across multiple healthcare organizations. Depending on pilot traction and partner interest, commercialization may proceed through HIT licensing or formation of a spin-out. The expected business model is recurring revenue based on site, clinical volume, or enterprise licensing.</p>
+<h4 id="intellectual-property">Intellectual Property</h4>
+<p>The scientific foundation comes from our previous research [1]. The PoC will create product-specific assets including the ACR representation and schema, annotation guidelines and project-specific annotation layers, trained and calibrated models, evaluation infrastructure, workflow architecture, implementation know-how, and integration components.</p>
+<p>A freedom-to-operate and IP review will determine which developments may justify patent protection and which are better retained as proprietary know-how. Defensibility is expected to arise from the combination of protectable methods where applicable, project-specific annotation and calibration assets, validated integration architecture, and implementation know-how. Commercial rights in derived assets will remain subject to the licenses and data-use agreements governing the underlying clinical corpora.</p>
+<h4 id="customers-and-follow-on-investment">Customers and Follow-on Investment</h4>
+<p>Initial customers are expected to be health-system quality and safety units, health plans/HMOs, care-coordination functions, and outpatient clinics. These organizations already have follow-up reliability and workflow-performance problems. EHR and care-coordination vendors represent a second customer class that can embed the CIM engine into their products.</p>
+<p>The PoC is designed to create the evidence required for the next investment decision: validated performance on real de-identified text, clinician-reviewed outputs, a hosted prototype, standards-based integration, customer-discovery evidence, a prospective pilot or Letter of Intent, and an IP/FTO assessment.</p>
+<p>Successful completion would move CareLoop from a research-backed concept to a validated pre-pilot health-tech asset suitable for preparation and initiation of a real-world clinical pilot, supporting follow-on funding from digital-health investors, strategic healthcare partners, or EHR and healthcare-software vendors.</p>
+<h4 id="expected-timetable">Expected Timetable</h4>
+<p>During the PoC, CareLoop will validate technical performance and generalization, clinician-facing outputs, interoperability, hosted deployment, customer need, site-level economics, and IP potential. In parallel, customer discovery will identify potential design partners and seek an LOI, pilot commitment, or agreed pilot specification. During the first 12 months after the PoC, the objective is to prepare and initiate the first real-world clinical pilot with a partner identified during the project. During months 12–24 after the PoC, the focus will be on completing the pilot, demonstrating operational value and willingness to pay, and converting successful validation into an initial reference customer. Thereafter, scaling can proceed through enterprise sales, strategic partnerships, and OEM licensing, with expansion into additional clinical-intent workflows.</p>
+<h4 id="feasibility-and-risk-reduction">Feasibility and Risk Reduction</h4>
+<p>Feasibility is supported by the results of our previous research [1], which demonstrated strong performance relative to conventional LLM baselines. The PoC therefore focuses on transfer, generalization, and productization rather than proving a new scientific principle. CareLoop’s modular architecture strengthens technical feasibility by integrating with existing clinical systems rather than replacing them.</p>
+<p><strong>Key risks and mitigation.</strong> The principal technical risk is lower accuracy or excessive review burden on heterogeneous real text; if triggered, the initial product will restrict supported instruction classes and route a larger fraction of uncertain records to review. Sparse condition or dependency examples will be treated as enrichment fields rather than core release gates. Integration risk is limited by the minimum FHIR workflow profile, with additional resources added only when required by a pilot. Commercial risk is addressed through customer discovery from project start, explicit testing of buyer and pricing hypotheses, and a target pilot commitment, LOI, or agreed pilot specification before project completion.</p>
+<h4 id="key-risks-and-mitigation.">Key risks and mitigation. </h4>
+<p>The principal technical risk is lower accuracy or excessive review burden on heterogeneous real text; this will be mitigated through calibrated selective review and, if required, restriction of the initial supported instruction classes. Sparse condition/dependency examples will be treated as enrichment fields rather than release gates. Integration risk is limited by a minimal FHIR workflow profile with optional extensions added only when required by a pilot. Commercial risk is addressed through customer discovery from project start and a target pilot commitment/LOI before completion.</p>
+</div>
+
+</div>
+</body>
+</html>
