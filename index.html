@@ -241,48 +241,7 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 <p><strong>Existing market barriers</strong>. The initial economic buyer is expected to be hospital or HMO quality, safety, and care-coordination units, while operational users are clinicians and staff responsible for completing follow-up. Existing approaches rely on manual EHR task entry, retrospective review, or workflow systems that can track a task only after it has been structured and entered. The unresolved upstream problem is converting follow-up intent already present in clinical text into a reliable workflow object without adding clinician data-entry burden. Adoption therefore depends on three factors: reliable extraction from heterogeneous clinical text, integration with existing EHR workflows, and sufficient precision and provenance to support clinical trust. The PoC directly tests these three barriers.</p>
 <p><strong>The POC question</strong> is whether the fixed hybrid extraction and normalization approach from [1], extended using established supervised methods, can produce source-supported follow-up records from real de-identified clinical notes at a level of precision and review burden suitable for a pre-pilot system, and whether accepted records can be carried without loss of required information into a standards-based clinical workflow.</p>
 <p><strong>Innovation and what the POC extends.</strong> The proposed innovation is a system that converts free-text clinical intent into a structured, source-linked Actionable Clinical Record, using hybrid AI extraction, explicit normalization of actions and timing, and standard interfaces for integration into clinical workflows. An explicit symbolic layer holds the parts that must be exact: the normalized action, the computed date, and the source span, so every ACR is auditable rather than a fluent guess. Existing clinical NLP systems [7–9] extract concepts and relations, and commercial radiology systems can identify and structure specific follow-up recommendations [21]. CareLoop’s proposed differentiation is the broader operational representation of prospective clinical intent: source-supported action and timing together with explicit target, actor, condition and dependency fields, calibrated human review, and deterministic mapping into interoperable workflow resources. The design is deliberately hybrid rather than purely generative: large language models contribute breadth and language coverage, while the symbolic layer guarantees that the action, the computed date, and the source span are exact. The innovation therefore lies not in task tracking itself, but in creating a reusable, auditable Clinical Intent Management layer between heterogeneous clinical text and downstream care workflows. This positions CareLoop within a broader shift from systems that record what happened, to systems that represent what should happen next [16]. On the controlled 2,000-note benchmark in [1], the completed method achieved action–time Pair F1 of 0.997 on seen and 0.986 on unseen action types, substantially outperforming the evaluated general-purpose LLM baselines. These results establish the technical starting point; the present POC tests whether the approach transfers to heterogeneous real clinical text. It extends the same established approach to an enriched ACR comprising target, actor, condition, and dependency fields, to heterogeneous real clinical text, and to calibrated review and standards-based integration.</p>
-<p><strong>Positioning versus existing approaches.</strong></p>
-<table><colgroup><col style="width:20%"><col style="width:22%"><col style="width:28%"><col style="width:30%"></colgroup><thead>
-<tr class="header">
-<th><strong>Existing approach</strong></th>
-<th><strong>Strength</strong></th>
-<th><strong>Limitation for follow-up</strong></th>
-<th><strong>CareLoop differentiation</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Manual EHR task/order entry</td>
-<td>Reliable when entered</td>
-<td>Requires clinician action or data entry</td>
-<td>Extracts intent that is already present in text</td>
-</tr>
-<tr class="even">
-<td>Rule/NER clinical NLP</td>
-<td>Auditable extraction</td>
-<td>Entity-centric, not workflow intent</td>
-<td>Action + timing + conditions + provenance</td>
-</tr>
-<tr class="odd">
-<td>General-purpose LLM summarization</td>
-<td>Flexible</td>
-<td>Output not necessarily structured or auditable</td>
-<td>Source-linked, constrained representation</td>
-</tr>
-<tr class="even">
-<td>Microsoft PowerScribe One</td>
-<td>Extracts radiology follow-up recommendations into structured fields; supports review and downstream EHR use [21]</td>
-<td>Focused on the radiology reporting workflow</td>
-<td>Targets clinical intent across heterogeneous clinical text, with conditions/dependencies, provenance, calibrated review, and standards-based workflow mapping</td>
-</tr>
-<tr class="odd">
-<td>Workflow/follow-up systems</td>
-<td>Track known tasks</td>
-<td>Require the structured task to exist first</td>
-<td>Supplies the missing structured task from text</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Advantages over existing approaches.</strong> Follow-up today depends on a clinician manually entering a task or order, which is reliable when it happens but requires an extra action and captures nothing that was only written in prose. Workflow and follow-up tracking systems monitor such tasks well, yet they presuppose that a structured task already exists. Rule-based and NER clinical NLP extracts entities and relations auditably, but stops short of an executable action bound to its timing. General-purpose LLM summarization is flexible, yet its output is neither reliably structured nor traceable to the source. Commercial radiology systems such as PowerScribe One do extract follow-up recommendations into structured fields and pass them downstream [21], but operate inside the radiology reporting workflow. CareLoop targets the gap these leave: it recovers intent from clinical text that has already been written, across specialties, and delivers it as a source-linked record carrying action, timing, conditions and dependencies, with calibrated review and deterministic mapping into standard workflow resources.</p>
 <h4 id="project-goals-and-tasks">Project Goals and Tasks</h4>
 <p>The plan is organized as six tasks in a dependency chain: the gold dataset (Task 1) enables engineering adaptation (Task 2) and validation (Task 3), which enable EHR integration (Task 4) and hosted deployment (Task 5); market validation and commercialization (Task 6) run alongside. Validation targets are fixed before any model adaptation. Tasks 1–5 are carried out using publicly available and/or credentialed de-identified research datasets, providing a complete technical validation path. Task 6 complements this work through partner-based market discovery and product feedback, helping assess workflow fit, pilot readiness, and commercialization potential, without involving patient data.</p>
 <table><colgroup><col style="width:17%"><col style="width:19%"><col style="width:40%"><col style="width:24%"></colgroup><thead>
