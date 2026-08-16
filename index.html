@@ -73,12 +73,15 @@ td.on{background:var(--on);} td.off{background:#fff;}
 <style id="gate-css">body>*{display:none!important}body{background:#e9edf1}</style>
 <script>
 (function(){
-  function unlock(){var c=document.getElementById('gate-css');if(c)c.remove();}
-  function deny(){document.documentElement.innerHTML='<body style="font-family:Arial,sans-serif;padding:48px;color:#12355b">Access denied.</body>';}
   var ok=false;
-  for(var i=0;i<3&&!ok;i++){var p=prompt('Password required to view this document:');if(p===null)break;ok=(p==='12345');}
-  if(ok){if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',unlock);}else{unlock();}}
-  else{deny();}
+  for(var i=0;i<3&&!ok;i++){
+    var p=prompt('Password required to view this document:');
+    if(p===null){break;}
+    ok=(p==='12345');
+  }
+  if(!ok){location.replace('denied.html');return;}
+  function unlock(){var c=document.getElementById('gate-css');if(c){c.parentNode.removeChild(c);}}
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',unlock);}else{unlock();}
 })();
 </script>
 </head>
@@ -282,11 +285,12 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 </table>
 <h4 id="project-goals-and-tasks">Project Goals and Tasks</h4>
 <p>The plan is organized as six tasks in a dependency chain: the gold dataset (Task 1) enables engineering adaptation (Task 2) and validation (Task 3), which enable EHR integration (Task 4) and hosted deployment (Task 5); market validation and commercialization (Task 6) run alongside. Validation targets are fixed before any model adaptation. Tasks 1–5 are carried out using publicly available and/or credentialed de-identified research datasets, providing a complete technical validation path. Task 6 complements this work through partner-based market discovery and product feedback, helping assess workflow fit, pilot readiness, and commercialization potential, without involving patient data.</p>
-<table><colgroup><col style="width:20%"><col style="width:24%"><col style="width:56%"></colgroup><thead>
+<table><colgroup><col style="width:17%"><col style="width:19%"><col style="width:40%"><col style="width:24%"></colgroup><thead>
 <tr class="header">
 <th><strong>Task (months)</strong></th>
 <th><strong>Objective</strong></th>
 <th><strong>Scope</strong></th>
+<th><strong>Milestone</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -294,35 +298,40 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 <td><strong>T1:</strong>  Data preparation &amp; labeling</td>
 <td>Create a gold-standard ACR dataset on real de-identified text</td>
 <td>Harmonize follow-up text from CLIP [13], i2b2 2012 [15], and MIMIC-IV discharge instructions [14]; define ACR guidelines; double-label action, target, timing, actor, condition, dependency, and provenance.</td>
+<td><strong>M8</strong> frozen annotation guideline and gold dataset</td>
 </tr>
 <tr class="even">
 <td><strong>T2:</strong>  Engineering adaptation &amp; extended ACR</td>
 <td>Extend from action–time to an enriched follow-up ACR on real text</td>
 <td>Extend the ACR with target, actor, condition, and dependency extracted from text, plus provenance and confidence, using the neuro-symbolic approach. </td>
+<td><strong>M12</strong> extended-ACR prototype</td>
 </tr>
 <tr class="odd">
 <td><strong>T3:</strong>  Model validation</td>
 <td>Demonstrate reliable, calibrated performance on real text</td>
 <td>Locked single-use test; transfer and unseen-type evaluation; baselines and ablations; confidence calibration and selective review; clinician-adjudicated evaluation. </td>
+<td><strong>M16</strong> locked validation completed against the success criteria</td>
 </tr>
 <tr class="even">
 <td><strong>T4:</strong> Integration</td>
 <td>Enable standards-based EHR integration</td>
 <td>Map reviewed ACRs to FHIR ServiceRequest/Task with Provenance, implement a SMART on FHIR review surface, and validate conformance and ACR→FHIR→ACR round-trip preservation. CDS Hooks and additional FHIR resources will be implemented where required by the target pilot workflow</td>
+<td><strong>M19</strong> minimum FHIR integration with round-trip conformance</td>
 </tr>
 <tr class="odd">
 <td><strong>T5:</strong> Hosted prototype deployment</td>
 <td>Demonstrate a trialable pre-pilot prototype</td>
 <td>Build a secure, access-controlled hosted prototype on de-identified data (simulated workflow, no autonomous write-back). </td>
+<td><strong>M21</strong> hosted pre-pilot prototype, externally evaluable</td>
 </tr>
 <tr class="even">
 <td><strong>T6:</strong>  Market validation</td>
 <td>Validate demand, defensibility, and route to market</td>
 <td>Conduct customer discovery across buyer and user groups, identify potential design partners and pilot requirements, and seek an LOI or agreed pilot specification. Assess freedom to operate and protectable IP, pursue protection where justified, and define the commercialization and licensing strategy.</td>
+<td><strong>M24</strong> market-validation, ROI, IP/FTO and pilot-preparation package</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Milestones.</strong> M8: frozen annotation guideline and gold dataset; M14: extended-ACR prototype; M20: locked validation and minimum FHIR integration completed; M24: hosted pre-pilot prototype together with market-validation, ROI, IP/FTO, and pilot-preparation deliverables.</p>
 <p><strong>Expected impact.</strong> CareLoop is intended to make follow-up instructions that are currently embedded in text available to existing tracking, reminder, and audit workflows. Prior structured follow-up programs have produced substantial improvements in completion of recommended imaging; the FIND program, for example, increased completion from <strong>30.8% to 50.7%</strong> [12]. This establishes the potential operational value of effective follow-up workflows. CareLoop addresses the upstream information gap required to supply those workflows directly from free clinical text; downstream clinical and operational effects would be evaluated in a subsequent real-world pilot.</p>
 <p><strong>ROI.</strong> Economic feasibility will be assessed at the site level using follow-up volume, baseline non-completion, expected improvement, value per completed follow-up, and software plus human-review costs. The primary output will be a break-even threshold, expressed as the number or percentage of additional completed follow-ups required for a site to cover CareLoop operating costs. Task 6 will estimate these inputs through customer discovery and prospective-partner data, using published results such as [12] only as external benchmarks. Conservative, base, and higher-impact scenarios will be compared together with per-site, per-volume, and licensing revenue models.</p>
 <p><strong>Planned final product.</strong> By month 24, the POC will deliver a validated pre-pilot CareLoop prototype with validated extraction of the core follow-up record and evaluated extraction of target, actor, condition, and dependency fields, standards-based EHR integration, and a secure hosted review workflow, along with the market, IP, and ROI evidence needed for a clinical pilot and commercialization. This POC establishes the first focused implementation of the broader Clinical Intent Management vision, which can later extend to additional clinical workflows and intent types.</p>
@@ -488,7 +497,7 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 <li><p><strong>Personal Statement</strong></p></li>
 </ol>
 <p>This PoC requires a combination of scientific, engineering, product-development, and commercialization capabilities. My career has developed across these areas, combining research in reliable language-information extraction with the development of operational AI systems, end-to-end new-product development, and entrepreneurship.</p>
-<p>My academic background is in machine learning across a range of application domains. I hold a Ph.D. in machine learning and signal processing from Tel Aviv University. My doctoral research produced seven first-author publications co-authored with Nobel laureate Leon N. Cooper, and was followed by postdoctoral research at the Weizmann Institute. My subsequent academic and industry work has focused on translating AI methods into reliable operational systems, including language-processing and information-extraction applications. At HIT, I lead a pragmatic AI research program focused on developing AI systems that remain reliable, interpretable, and usable under real-world conditions. The program combines academic research, student participation, and industry collaboration.</p>
+<p>My academic background is in machine learning across a range of application domains. I hold a Ph.D. in machine learning and signal processing from Tel Aviv University. My doctoral research produced seven first-author publications co-authored with Nobel laureate Leon N. Cooper, and was followed by postdoctoral research at the Weizmann Institute. My subsequent academic and industry work has focused on translating AI methods into reliable operational systems, including language-processing and information-extraction applications. At HIT, I lead the Pragmatic AI research program, focused on developing AI systems that remain reliable, interpretable, and usable under real-world conditions. The program combines academic research, student participation, and industry collaboration.</p>
 <p>A substantial part of my current and previous work, in both academia and industry, has focused on reliably extracting and processing information from text using natural language processing, machine learning, and, more recently, LLMs. Further details are available at <a href="https://www.apartsin.com/research/robust-language-ai.html">apartsin.com/research/robust-language-ai.html</a>. In particular, my recent work provides the scientific foundation for CareLoop, including the hybrid neural-symbolic method on which this proposal builds [1].</p>
 <p>Much of my industry career has focused on applying AI methods toward operational systems and products. At the Motorola Solutions Israel Innovation Center, I led work on AI for public-safety applications spanning image, text, video, and audio. As VP of AI at harmon.ie, I worked on large-scale enterprise document-intelligence systems to extract and organize information from unstructured document collections. At Questar, I led research and engineering teams developing automotive-telematics AI.</p>
 <p>I have also co-founded and provided technical leadership to several technology ventures. At SearchNG, I helped establish the company and led its capital-raising activities. This practical experience is complemented by formal training in innovation and product development: an M.S. in Management with a focus on innovation from NYU Polytechnic and the PDMA New Product Development Professional (NPDP) certification, covering new-product development and commercialization from opportunity identification through launch.</p>
