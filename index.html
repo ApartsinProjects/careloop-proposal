@@ -56,6 +56,26 @@ td.on{background:var(--on);} td.off{background:#fff;}
      border-bottom:2px solid var(--brand);padding-bottom:6px;margin-bottom:16px;font-weight:700;
      overflow-wrap:anywhere;word-break:break-word;}
 
+.hdr2{display:grid;grid-template-columns:1fr 1fr;gap:0 28px;align-items:start;
+   border-bottom:2px solid var(--brand);padding-bottom:10px;margin-bottom:16px;}
+.hdr-en p,.hdr-he p{margin:0 0 5px;text-align:left;hyphens:none;}
+.hdr-he{direction:rtl;}
+.hdr-he p{text-align:right;}
+@media (max-width:760px){.hdr2{grid-template-columns:1fr;gap:12px;}}
+
+.dl{display:flex;gap:8px;justify-content:flex-end;margin:0 0 10px;}
+.dl a{font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;
+   text-decoration:none;color:#fff;background:var(--brand);
+   padding:6px 14px;border-radius:3px;line-height:1.2;}
+.dl a:hover{opacity:.85;}
+@media print{.dl{display:none;}}
+
+td,th{line-height:1.45;}
+.t0 td:nth-child(2),.t0 td:nth-child(3){text-align:center;}
+.t3 td:nth-child(2),.t3 td:nth-child(3){text-align:center;white-space:nowrap;}
+.t4 td:nth-child(2){text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;}
+.t4 td:nth-child(3){text-align:justify;hyphens:auto;}
+
 @media (max-width:760px){
   body{font-size:11pt;line-height:1.55;}
   table{table-layout:fixed;font-size:9.5pt;}
@@ -87,26 +107,7 @@ td.on{background:var(--on);} td.off{background:#fff;}
 </head>
 <body>
 <div class="page">
-<div class="doctitle">Mirror generated from HIT_Artificial_Intelligence_(Applications)_Alexander_Apartsin.docx</div>
-<p dir="rtl"><strong>טופס הגשת הצעת מחקר</strong></p>
-<p dir="rtl"><strong>תוכנית למימון מחקרי הוכחת היתכנות במוסדות המתוקצבים ע"י ות"ת- מחזור שני</strong></p>
-<p dir="rtl"><strong>מרכז הפרויקט:</strong> ד"ר אלכסנדר אפארצין</p>
-<p dir="rtl"><strong>מוסד מגיש:</strong> מכון טכנולוגי חולון (HIT)</p>
-<p dir="rtl"><strong>נושא המחקר:</strong> CareLoop: פלטפורמת בינה מלאכותית לניהול הנחיות טיפול ומעקב רפואי אמין</p>
-<p dir="rtl"><strong>תחום:</strong> Artificial_Intelligence_(Applications)</p>
-<p><strong>Research Title:</strong> CareLoop: An AI Platform for Clinical Intent Management and Reliable Follow-Up Care</p>
-<p><strong>Principal Investigator:</strong> Dr. Alexander Apartsin</p>
-<p><strong>Institute:</strong> Holon Institute of Technology (HIT)</p>
-<p><strong>Total Funding Requested (ILS):</strong> 350000</p>
-<p><strong>Duration (months):</strong> 24</p>
-<p><strong>Submission Format</strong></p>
-<p>Language: English only</p>
-<p>Font: Times New Roman, size: 11</p>
-<p>Line spacing: 1.5</p>
-<p>Margins: Minimum 2 cm on all sides</p>
-<p>File format: PDF</p>
-<p>Maximum volume for pure: 2.5 megabytes</p>
-<ol type="A">
+<div class="dl"><a href="HIT_Artificial_Intelligence_%28Applications%29_Alexander_Apartsin.docx" download>Word</a><a href="HIT_Artificial_Intelligence_%28Applications%29_Alexander_Apartsin.pdf" download>PDF</a></div><div class="hdr2"><div class="hdr-en"><p><strong>Research Title:</strong> CareLoop: An AI Platform for Clinical Intent Management and Reliable Follow-Up Care</p><p><strong>Principal Investigator:</strong> Dr. Alexander Apartsin</p><p><strong>Institute:</strong> Holon Institute of Technology (HIT)</p><p><strong>Total Funding Requested (ILS):</strong> 350000</p><p><strong>Duration (months):</strong> 24</p></div><div class="hdr-he" dir="rtl"><p dir="rtl"><strong>טופס הגשת הצעת מחקר</strong></p><p dir="rtl"><strong>תוכנית למימון מחקרי הוכחת היתכנות במוסדות המתוקצבים ע"י ות"ת- מחזור שני</strong></p><p dir="rtl"><strong>מרכז הפרויקט:</strong> ד"ר אלכסנדר אפארצין</p><p dir="rtl"><strong>מוסד מגיש:</strong> מכון טכנולוגי חולון (HIT)</p><p dir="rtl"><strong>נושא המחקר:</strong> CareLoop: פלטפורמת בינה מלאכותית לניהול הנחיות טיפול ומעקב רפואי אמין</p><p dir="rtl"><strong>תחום:</strong> Artificial_Intelligence_(Applications)</p></div></div><p><strong>Submission Format</strong></p><p>Language: English only</p><p>Font: Times New Roman, size: 11</p><p>Line spacing: 1.5</p><p>Margins: Minimum 2 cm on all sides</p><p>File format: PDF</p><p>Maximum volume for pure: 2.5 megabytes</p><ol type="A">
 <li><p><strong>ABSTRACTS</strong></p></li>
 </ol>
 <blockquote>
@@ -147,7 +148,7 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 <p><strong>Ethical and Regulatory Requirements</strong></p>
 <p>Does the research involve any of the following?</p>
 <p><em>Please select one option in each row.</em></p>
-<table><colgroup><col style="width:50%"><col style="width:25%"><col style="width:25%"></colgroup>
+<table class="t0"><colgroup><col style="width:50%"><col style="width:25%"><col style="width:25%"></colgroup>
 <thead>
 <tr class="header">
 <th></th>
@@ -247,7 +248,7 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 <p><strong>External evidence of market need.</strong> Follow-up reliability is already recognized as an operational quality problem requiring dedicated workflows. The American College of Radiology reports that up to 10% of radiology reports contain follow-up recommendations and that approximately half of the recommended examinations are not completed; it operates a national Recommendations Follow-Up Improvement Collaborative addressing this gap [4]. CMS separately treats Closing the Referral Loop as a high-priority quality measure [20]. Recent clinical informatics literature describes systematic follow-up management as a workflow spanning identification, communication, tracking through to completion, and outcome assessment. It identifies AI as a means to reduce manual effort across these stages [19]. These signals establish an existing institutional need; Task 6 therefore focuses on validating CareLoop-specific hypotheses regarding buyers, workflows, integrations, pricing, and pilot.</p>
 <h4 id="project-goals-and-tasks">Project Goals and Tasks</h4>
 <p>The plan is organized as six tasks in a dependency chain: the gold dataset (Task 1) enables engineering adaptation (Task 2) and validation (Task 3), which enable EHR integration (Task 4) and hosted deployment (Task 5); market validation and commercialization (Task 6) run alongside. Validation targets are fixed before any model adaptation. Tasks 1–5 are carried out using publicly available and/or credentialed de-identified research datasets, providing a complete technical validation path. Task 6 complements this work through partner-based market discovery and product feedback, helping assess workflow fit, pilot readiness, and commercialization potential, without involving patient data.</p>
-<table><colgroup><col style="width:20%"><col style="width:24%"><col style="width:40%"><col style="width:16%"></colgroup>
+<table class="t1"><colgroup><col style="width:20%"><col style="width:24%"><col style="width:40%"><col style="width:16%"></colgroup>
 <thead>
 <tr class="header">
 <th><strong>Task (months)</strong></th>
@@ -307,7 +308,7 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 <ol start="2" type="1">
 <li><p><strong>Schedules and Work Plan (Gantt)</strong></p></li>
 </ol>
-<table style="width:100%;">
+<table class="t2"><colgroup><col style="width:4%"><col style="width:28%"><col style="width:8.5%"><col style="width:8.5%"><col style="width:8.5%"><col style="width:8.5%"><col style="width:8.5%"><col style="width:8.5%"><col style="width:8.5%"><col style="width:8.5%"></colgroup>
 <thead>
 <tr class="header">
 <th class="gh">#</th>
@@ -434,7 +435,7 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 <p><strong>Position Title:</strong></p>
 <p>Senior Lecturer, School of Computer Science, Holon Institute of Technology</p>
 <p><strong>Education/Training</strong>:</p>
-<table><colgroup><col style="width:32%"><col style="width:68%"></colgroup>
+<table class="t3"><colgroup><col style="width:40%"><col style="width:12%"><col style="width:12%"><col style="width:36%"></colgroup>
 <thead>
 <tr class="header">
 <th><strong>Institution and Location</strong></th>
@@ -522,7 +523,7 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 <p><strong>Total funding requested:</strong> 350000 NIS</p>
 <p><strong>Duration (months):</strong> 24</p>
 <p><strong>Currency:</strong> ILS(NIS)</p>
-<table><colgroup><col style="width:4%"><col style="width:28%"><col style="width:8.5%"><col style="width:8.5%"><col style="width:8.5%"><col style="width:8.5%"><col style="width:8.5%"><col style="width:8.5%"><col style="width:8.5%"><col style="width:8.5%"></colgroup>
+<table class="t4"><colgroup><col style="width:24%"><col style="width:10%"><col style="width:66%"></colgroup>
 <thead>
 <tr class="header">
 <th><strong>Category</strong></th>
