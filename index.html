@@ -114,7 +114,7 @@ td.on{background:var(--on);} td.off{background:#fff;}
 </blockquote>
 <div class="box" dir="rtl" lang="he">
 <p><span dir="rtl">מערכות רשומה רפואית אלקטרונית (EHR) מתעדות רשומות ועובדות קליניות מובנות, אך שכבה תפעולית חשובה נותרת לעיתים קרובות בטקסט החופשי בלבד: הכוונה הקלינית, כלומר, מה אמור להתבצע בהמשך עבור המטופל. הנחיות כגון "לחזור על בדיקת MRI בעוד שבועיים אם התסמינים נמשכים" עלולות לפיכך שלא להיקלט במערכות המשמשות לזימון תורים, מעקב ובקרה.</span></p>
-<p><span dir="rtl">CareLoop ממירה הנחיות כאלה לפעולות מובנות, מקושרות למקור וניתנות לבקרה. החידוש המרכזי הוא בגישת ניהול כוונה קלינית (Clinical Intent Management, CIM): שכבת תשתית גנרית בין הטקסט הקליני ההטרוגני לבין תהליכי העבודה הפועלים על בסיסו. המערכת מבוססת על שיטה נוירו-סימבולית לחילוץ ולנרמול של פעולות מעקב ומועדיהן, שפותחה במחקרו הקודם של החוקר הראשי.</span></p>
+<p><span dir="rtl">CareLoop ממירה הנחיות כאלה לפעולות מובנות, מקושרות למקור וניתנות לבקרה. החידוש המרכזי הוא בגישת ניהול כוונה קלינית (Clinical Intent Management, CIM): שכבת תשתית גנרית בין הטקסט הקליני ההטרוגני לבין תהליכי העבודה הפועלים על בסיסו. הכוונה הקלינית באה לידי ביטוי בהפניות, בהוראות, בתוכניות מותנות ובהנחיות מעקב; ה-</span>PoC <span dir="rtl">מיישם אותה תחילה על הנחיות מעקב המערכת מבוססת על שיטה נוירו-סימבולית לחילוץ ולנרמול של פעולות מעקב ומועדיהן, שפותחה במחקרו הקודם של החוקר הראשי.</span></p>
 <p><span dir="rtl">אי-הוודאות המרכזית שנותרה היא האם השיטה עוברת באופן אמין ממאגר מבוקר לטקסט קליני אמיתי והטרוגני ויכולה להשתלב בתהליך עבודה מעשי של EHR. ה-PoC ירחיב את השיטה לחילוץ שדות נוספים של הכוונה הקלינית, יבצע אימות על טקסטים קליניים אמיתיים, מגוונים ומותממים, וידגים אינטגרציה מבוססת FHIR/SMART. התוצר יהיה אב-טיפוס מאומת לקראת פיילוט לניהול אמין של הנחיות מעקב.</span></p>
 </div>
 <blockquote>
@@ -122,7 +122,7 @@ td.on{background:var(--on);} td.off{background:#fff;}
 </blockquote>
 <div class="box">
 <p>Electronic Health Record (EHR) systems capture records and structured clinical facts. Still, a third operational layer often remains buried in free text: clinical intent, or what is supposed to happen next for the patient. Follow-up instructions such as “repeat the MRI in two weeks if symptoms persist” may therefore never enter the systems used to schedule, track, and audit care.</p>
-<p>CareLoop converts such instructions into structured, source-linked, and reviewable actions. We term this capability Clinical Intent Management (CIM): a reusable, auditable layer between heterogeneous clinical text and the workflows that act on it. CareLoop builds on the PI’s prior neuro-symbolic method for extracting and normalizing follow-up actions and timing.</p>
+<p>CareLoop converts such instructions into structured, source-linked, and reviewable actions. We term this capability Clinical Intent Management (CIM): a reusable, auditable layer between heterogeneous clinical text and the workflows that act on it. Clinical intent spans referrals, orders, conditional plans, and follow-up; this PoC instantiates CIM on follow-up as its first concrete case.</p>
 <p>The key remaining uncertainty is whether this approach transfers reliably from a controlled benchmark to heterogeneous real clinical text and can support a practical EHR workflow. The PoC will extend the method to additional intent fields, validate it on real de-identified clinical notes using a locked test and calibrated review, and demonstrate standards-based integration through FHIR/SMART workflows. The outcome will be a validated pre-pilot prototype suitable for design-partner evaluation and preparation of a real-world pilot.</p>
 </div>
 <blockquote>
@@ -423,7 +423,7 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 <li><p>(*) O’Connor, S. D., Alkasab, T., Samuel, J. K. R., &amp; Sippo, D. A. (2026). The Potential Role of Artificial Intelligence in Systematic Follow-Up Recommendation Tracking and Outcome Assessment. Journal of the American College of Radiology, 23(3), 410–420. https://doi.org/10.1016/j.jacr.2025.10.019</p></li>
 <li><p>Centers for Medicare &amp; Medicaid Services. Closing the Referral Loop: Receipt of Specialist Report. Quality ID 374; eCQM CMS50v12. qpp.cms.gov/mips/explore-measures/ecqm/CMS50v12 (accessed 2026).</p></li>
 <li><p>Microsoft. PowerScribe One: Follow-Up Recommendations. support.microsoft.com/powerscribe-one/follow-up-recommendations (accessed 2026).</p></li>
-<li><p>Apartsin, A., &amp; Aperstein, Y. (2026). Clinical Communication Processing with Models Trained on LLM-Generated Synthetic Data: A Structured Survey and Novel Application Case Studies. arXiv:2608.05993. https://doi.org/10.48550/arXiv.2608.05993</p></li>
+<li><p>Apartsin, A., &amp; Aperstein, Y. (2026). Clinical Communication Processing with Models Trained on LLM-Generated Synthetic Data: A Structured Survey and Novel Application Case Studies. arXiv:2608.05993. <a href="https://doi.org/10.48550/arXiv.2608.05993">https://doi.org/10.48550/arXiv.2608.05993</a></p></li>
 <li><p>Apartsin, A., &amp; Aperstein, Y. (2026). Clinical Intent Extraction: A FHIR-Aligned Representation and the CIRCA Benchmark. Manuscript submitted for peer review.</p></li>
 </ol>
 <blockquote>
@@ -513,7 +513,7 @@ Current EHR systems often leave patient-specific follow-up intent in free text, 
 <li><p>Aperstein, Y., Moran, E., &amp; <u>Apartsin</u>, A. (2026). IRC-Bench: Recognizing Entities from Contextual Cues in First-Person Reminiscences. Machine Learning and Knowledge Extraction, 8(7), 186. <a href="https://doi.org/10.3390/make8070186">https://doi.org/10.3390/make8070186</a>.</p></li>
 <li><p>Werthaim, M., Kimhi, M., <u>Apartsin</u>, A., &amp; Aperstein, Y. (2026). A Benchmark for Evaluating Diagnostic Questioning Efficiency of LLMs in Patient Conversations. Scientific Reports, 16, 6121<a href="file:///C:\Users\apart\AppData\Roaming\Microsoft\Word\.%20https:\doi.org\10.1038\s41598-026-37022-y">. https://doi.org/10.1038/s41598-026-37022-y</a></p></li>
 <li><p>Aperstein, Y., Gottlib, A., Benita, G., &amp; <u>Apartsin</u>, A. (2025). Explainable Semantic Text Relations: A Question-Answering Framework for Comparing Document Content. Information, 16(12), 1090. <a href="https://doi.org/10.3390/info16121090.">https://doi.org/10.3390/info16121090.</a></p></li>
-<li><p>Apartsin, A., &amp; Aperstein, Y. (2026). Clinical Intent Extraction: A FHIR-Aligned Representation and the CIRCA Benchmark. arXiv:XXXX.XXXXX, https://doi.org/10.48550/arXiv.XXXX.XXXXX. (Preprint; not yet peer-reviewed. Harmonized intent dataset and FHIR mapper underpinning Task 1.)</p></li>
+<li><p>Apartsin, A., &amp; Aperstein, Y. (2026). Clinical Intent Extraction: A FHIR-Aligned Representation and the CIRCA Benchmark. arXiv:XXXX.XXXXX, <a href="https://doi.org/10.48550/arXiv.XXXX.XXXXX">https://doi.org/10.48550/arXiv.XXXX.XXXXX</a>. (Preprint; not yet peer-reviewed. Harmonized intent dataset and FHIR mapper underpinning Task 1.)</p></li>
 </ol>
 <p><strong>D. Research Support</strong>: None</p>
 <blockquote>
